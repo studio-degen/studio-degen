@@ -9,5 +9,4 @@ website:
 - https://github.com/pandahya/studio-degen/wireframe
 
 quantum arcade:
-- q-sweeper https://github.com/pandahya/qjam-entangled
-
+- q-sweeper https://github.com/pandahya/q-sweeper/
