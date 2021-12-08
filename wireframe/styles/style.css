@@ -20,11 +20,20 @@ body {
   background-color: var(--white);
   font-family: 'Work Sans', sans-serif;
 }
+nav{
+  visibility: hidden;
+  position:fixed;
+  right: 0;
+}
+nav ul li{
+  list-style-type: none;
+}
+
 h1 {
   font-family: terfens, sans-serif;
   color: var(--black);
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 115px;
   margin: 0px;
 }
