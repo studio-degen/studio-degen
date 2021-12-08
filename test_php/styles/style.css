@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+@import url("https://use.typekit.net/dpx2cqa.css");
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #cccccb;
+  --accentCol1: #564fa1;
+  --accentCol2: #938ac2;
+  --outerMargin: 20vw;
+  --innerWidth: 15vw;
+  --innerContent: 60vw;
+  --innerHeightMargin: 10vh;
+  --outerHeightMargin: 20vh;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  background-color: var(--white);
+  font-family: 'Work Sans', sans-serif;
+}
+nav{
+  visibility: hidden;
+  position:fixed;
+  right: 0;
+}
+nav ul li{
+  list-style-type: none;
+}
+
+h1 {
+  font-family: terfens, sans-serif;
+  color: var(--black);
+  font-size: 36px;
+  font-weight: 400;
+  max-width: 115px;
+  margin: 0px;
+}
+h2 {
+  font-family: terfens, sans-serif;
+  color: var(--black);
+  font-size: 72px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0px;
+}
+h3 {
+  color: var(--black);
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0px;
+}
+h4 {
+  color: var(--black);
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0px;
+}
+h5 {
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0px;
+}
+p {
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 300;
+}
+hr {
+  width: 100%;
+}
+hr #tag {
+  width: calc(0.75 * var(--innerWidth));
+}
+button {
+  background-color: var(--grey);
+  border: none;
+  float: right;
+  padding: 1vh 1vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 25px;
+  margin: 4vh auto 0 auto;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+a:visited {
+  color: var(--black);
+}
+.flex {
+  display: flex;
+  flex-wrap: flex;
+}
+.flexSpaceBtw {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.fullHeight {
+  height: 100vh;
+}
+.alignCenter {
+  text-align: center;
+}
+.featuredContainer {
+  display: flex;
+  align-self: flex-end;
+}
+.featuredImage {
+  padding-left: 15vw;
+  width: 55vw;
+  height: 80vh;
+  background-color: var(--grey);
+}
+.profile {
+  width: var(--innerWidth);
+}
+.contactBox {
+  border-color: var(--black);
+  border-style: solid;
+  border-width: 1px;
+  margin: 4vh auto 0 auto;
+  padding: 0 1vw;
+}
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+}
+#headerFlex {
+  margin: 1vw;
+  justify-content: space-between;
+}
+#logo {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+#homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20vw;
+  background-color: var(--grey);
+  z-index: 5;
+}
+#scribble {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+#featured {
+  padding: 20vh 0 10vh 20vw;
+}
+#about {
+  margin: var(--outerHeightMargin) var(--outerMargin);
+}
+#profilePhoto {
+  width: calc(0.9 * var(--innerWidth));
+  height: calc(0.9 * var(--innerWidth));
+  background-color: var(--grey);
+}
+#contact {
+  margin: var(--outerHeightMargin) var(--outerMargin);
+}
+#contact h3 {
+  text-align: center;
+}
+#centerText {
+  text-align: center;
+}
+#contactForm {
+  max-width: calc(2.5 * var(--innerWidth));
+  margin: 0 auto;
+}
+footer {
+  padding: 0 var(--outerMargin);
+  border-color: var(--black);
+  border-style: solid;
+  border-width: 1px;
+}
+#footerWords p {
+  margin-left: 1vw;
+}
+#footerIcons {
+  margin: auto 0;
+}
+#socials {
+  background-color: var(--grey);
+  width: 40px;
+  height: 40px;
+  margin-left: 1vw;
+  border-radius: 50%;
+}
+#jumpTo {
+  position: fixed;
+  top: 35vh;
+  /* width: calc(0.5 * var(--outer/Margin)); */
+  width: 20vw;
+  margin: 5vh 1vw;
+}
+#jumpTo li{
+  color: var(--black);
+  display: flex;
+  list-style-type: none;
+  margin: 10px 0;
+}
+#jumpTo a{
+  margin: 0 0 0 10px;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  opacity: 0%;
+}
+#jumpTo a:hover{
+  opacity: 100%;
+}
+.circle {
+  background-color: var(--grey);
+  width: 20px;
+  height: 20px;
+  /* margin: 0 1vw 0 3vw; */
+  border-radius: 50%;
+}
+
+/* PAGE 2: Projects */
+.project {
+  width: 100%;
+  height: 100%;
+  width: calc(0.3 * var(--innerContent));
+  height: calc(0.3 * var(--innerContent));
+  background-color: var(--grey);
+  text-align: center;
+}
+.project:hover {
+  background-color: var(--accentCol2);
+}
+.project:hover .projectName {
+  opacity: 100%;
+}
+.projectName {
+  opacity: 0%;
+}
+#projects {
+  margin: var(--outerHeightMargin) var(--outerMargin);
+}
+/* PAGE 3: About */
+.person {
+  margin: var(--innerHeightMargin) 0;
+}
+#about {
+  max-width: var(--innerHeightMargin) var(--outerMargin);
+}
+#picture {
+  width: calc(0.45 * var(--innerContent));
+  height: calc(0.45 * var(--innerContent));
+  background-color: var(--grey);
+}
+#personText {
+  width: calc(0.45 * var(--innerContent));
+}
+#teamPlayers {
+  flex-wrap: wrap;
+}
+/* PAGE 4: Devlog */
+#devlog {
+  margin: var(--innerHeightMargin) var(--outerMargin);
+}
+#devlog h2 {
+  text-align: left;
+}
+#posts {
+  width: calc(2.5 * var(--innerWidth));
+}
+#tags {
+  width: calc(0.9 * var(--innerWidth));
+  height: 100vh;
+}
+#tags h4 {
+  text-align: right;
+}
+#individualPost {
+  border-style: solid;
+  border-width: 1px;
+  padding: 2vh 2vw;
+  margin: calc(0.5 * var(--innerHeightMargin)) 0;
+}
+/* PAGE 5: Q-Sweeper */
+.date {
+  font-size: 30px;
+  font-weight: 400;
+  font-style: italic;
+}
+.projectBlurb {
+  max-width: calc(3 * var(--innerWidth));
+}
+.projectLink {
+  font-size: 24px;
+  font-weight: 300;
+}
+.projectLink:hover {
+  font-style: italic;
+  opacity: 50%;
+}
+#q-sweeper {
+  margin: var(--innerHeightMargin) var(--outerMargin);
+}
+#mainImg {
+  height: 405px;
+  width: var(--innerContent);
+  background-color: var(--grey);
+  margin: var(--innerHeightMargin) 0;
+}
+#imageGalleryx2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: var(--innerHeightMargin) 0;
+}
+.imagex2 {
+  width: calc(0.45 * var(--innerContent));
+  height: 305px;
+  background-color: var(--grey);
+  margin: calc(0.5 * var(--innerHeightMargin)) 0;
+}
