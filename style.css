@@ -12,6 +12,14 @@ h1{
     font-weight: bold;
     font-size: 72px;
 }
+a:link, a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:hover, a:active{
+    color: blue;
+}
+
 nav ul{
     display: flex;
     justify-content: flex-end;
@@ -25,7 +33,7 @@ nav ul li{
 }
 
 footer{
-    background-color: red;
+    /* background-color: red; */
     width: 100vw;
     z-index: 10;
     position: relative;
