@@ -255,7 +255,8 @@ main a:hover {
 footer{
   display: flex;
   justify-content: space-between;
-  padding: 0 var(--outerMargin);
+  /* padding: 0 var(--outerMargin); */
+  padding: 0 20px;
   /* border: 1px solid var(--foreground); */
 }
 #footerIcons {
@@ -406,9 +407,9 @@ footer{
   gap: 2vh 2vw;
   margin: var(--innerHeightMargin) 0;
 }
-.gallery figure{
-  background-color: #564fa1;
-  height: 100%;
+.gallery figure img{
+  /* background-color: #564fa1; */
+  /* height: 100%; */
   width: 100%;
 }
 .imagex2 {
