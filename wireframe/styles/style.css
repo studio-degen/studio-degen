@@ -82,6 +82,10 @@ p {
   font-size: 24px;
   font-weight: 300;
 }
+figure{
+  margin: 0;
+  padding: 0;
+}
 hr {
   width: 100%;
 }
@@ -352,14 +356,20 @@ footer {
 }
 #mainImg {
   height: 405px;
-  width: var(--innerContent);
+  width: 100%;
   background-color: var(--grey);
   margin: var(--innerHeightMargin) 0;
 }
-#imageGalleryx2 {
-  display: flex;
-  flex-wrap: wrap;
+#gallery {
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  gap: 2vh 2vw;
   margin: var(--innerHeightMargin) 0;
+}
+#gallery figure{
+  background-color: #564fa1;
+  height: 100%;
+  width: 100%;
 }
 .imagex2 {
   width: calc(0.45 * var(--innerContent));
