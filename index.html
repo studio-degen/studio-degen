@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Studio Degen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" media="screen"/>
+</head>
+
+<!--General naming syntax used: camelCase-->
+<body>
+<!--header with studio name and logo, reused across pages-->
+<header>
+    <div id="headerFlex">
+        <h1 id="title"><a href="index.html">STUDIO DEGEN</a></h1>
+        <div id="logo">
+            <!--Normal logo img-->
+            <img id="logo_img" src="./assets/logo.png" alt="Studio Degen logo">
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="devlog.html">Devlog</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+    
+<!--main body, changes across pages-->
+<main>
+    <!--homepage-->
+    <section id="homepage" class="fullHeight">
+        <div id="scribble">
+        </div>
+        <h1>&darr;</h1>
+    </section>
+
+    <!-- side jump tos -->
+    <ul id="jumpTo">
+        <li>
+            <div class="circle"></div>
+            <a href="#feat1">Q-Sweeper</a> 
+        </li>
+        <li>
+            <div class="circle"></div>
+            <a href="#feat2">Creative Code</a>
+        </li>
+        <li>
+            <div class="circle"></div>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <div class="circle"></div>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <!--featured-->
+    <section id="featured">
+        <article id="feat1">
+            <div class="textContainer">
+                <h3>Q-Sweeper</h3>
+                <h4>description words here yea</h4>
+            </div>
+            <div class="featuredImage">
+            </div>
+        </article>
+        <article id="feat2">
+            <div class="textContainer">
+                <h3>Creative Code</h3>
+                <h4>description words here yea</h4>
+            </div>
+            <div class="featuredImage">
+                </div>
+            </article>
+    </section>
+
+    <!-- about -->
+    <section id="about">
+        <hr>
+        <article id="info">
+            <h2>Studio Degen</h2>
+            <p>
+                Studio Degen is the only creative studio that brings forth playful and unexpected experiences because we believe that everyone should have the opportunity to engage with emerging technologies.
+            </p>
+        </article>
+        <article class="flex">
+            <div class="profile">
+                <div id="profilePhoto"></div>
+                <p>Name Name</p>
+            </div>
+            <div class="profile">
+                <div id="profilePhoto"></div>
+                <p>Name Name</p>
+            </div>
+            <div class="profile">
+                <div id="profilePhoto"></div>
+                <p>Name Name</p>
+            </div>
+            <div class="profile">
+                <div id="profilePhoto"></div>
+                <p>Name Name</p>
+            </div>
+        </article>
+        <hr>
+    </section>
+
+    <!--contact-->
+    <section id="contact">
+        <h3>Contact</h3>
+        <article id="contactForm">
+            <p id="centerText">email@email.com &rarr;</p>
+            <div class="contactBox">
+                <p id="contactText">first</p>
+            </div>
+            <div class="contactBox">
+                <p id="contactText">last</p>
+            </div>
+            <div class="contactBox">
+                <p id="contactText">email</p>
+            </div>
+            <div class="contactBox" style="height:20vh">
+                <p id="contactText">message</p>
+            </div>
+            <button>Submit</button>
+        </article>
+    </section>
+</main>
+
+<!--footer with socials, reused across pages-->
+<footer>
+    <p>Studio Degen © 2021</p>
+    <div id="footerIcons" class="flex">
+        <div id="socials"></div>
+        <div id="socials"></div>
+        <div id="socials"></div>
+    </div>
+</footer>  
+</body>
+
+<script src="./scripts/main.js"></script>
+
+</html> 
