@@ -20,6 +20,13 @@ body {
   background-color: var(--white);
   font-family: 'Work Sans', sans-serif;
 }
+.width{
+  max-width: 900px;
+  margin: var(--outerHeightMargin) auto 0 auto;
+}
+.width section{
+  margin: 150px 0;
+}
 nav{
   visibility: hidden;
   position:fixed;
@@ -76,6 +83,7 @@ hr #tag {
   width: calc(0.75 * var(--innerWidth));
 }
 button {
+  font-family: 'Work Sans', sans-serif;
   background-color: var(--grey);
   border: none;
   float: right;
@@ -96,7 +104,6 @@ a:visited {
 }
 .flex {
   display: flex;
-  flex-wrap: flex;
 }
 .flexSpaceBtw {
   display: flex;
@@ -235,12 +242,26 @@ footer {
 }
 
 /* PAGE 2: Projects */
-.project {
+/* .project {
   width: 100%;
   height: 100%;
   width: calc(0.3 * var(--innerContent));
   height: calc(0.3 * var(--innerContent));
   background-color: var(--grey);
+  text-align: center;
+} */
+.projects {
+  display: grid;
+  grid: 1fr / 1fr 1fr 1fr;
+  gap: 2vh 2vw;
+}
+.project{
+  /* width: calc(0.3 * var(--innerContent));
+  height: calc(0.3 * var(--innerContent)); */
+  width: 100%;
+  height: 100%;
+  background-color: var(--grey);
+  margin: 0;
   text-align: center;
 }
 .project:hover {
@@ -249,30 +270,30 @@ footer {
 .project:hover .projectName {
   opacity: 100%;
 }
-.projectName {
+.project figcaption {
   opacity: 0%;
 }
-#projects {
-  margin: var(--outerHeightMargin) var(--outerMargin);
-}
+
+
+
 /* PAGE 3: About */
-.person {
-  margin: var(--innerHeightMargin) 0;
-}
-#about {
+#abtPg {
   max-width: var(--innerHeightMargin) var(--outerMargin);
 }
-#picture {
+.person {
+  display: flex;
+  margin: var(--innerHeightMargin) 0;
+}
+.picture {
   width: calc(0.45 * var(--innerContent));
   height: calc(0.45 * var(--innerContent));
   background-color: var(--grey);
 }
 #personText {
   width: calc(0.45 * var(--innerContent));
+  padding: 20px;
 }
-#teamPlayers {
-  flex-wrap: wrap;
-}
+
 /* PAGE 4: Devlog */
 #devlog {
   margin: var(--innerHeightMargin) var(--outerMargin);
@@ -296,6 +317,7 @@ footer {
   padding: 2vh 2vw;
   margin: calc(0.5 * var(--innerHeightMargin)) 0;
 }
+
 /* PAGE 5: Q-Sweeper */
 .date {
   font-size: 30px;
