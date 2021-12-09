@@ -6,7 +6,7 @@ ok php does not work w github pages, this website does not work
 we make games
 
 website:
-- https://github.com/pandahya/studio-degen/wireframe
+- will fix link soon
 
 quantum arcade:
-- q-sweeper https://github.com/pandahya/q-sweeper/
+- q-sweeper https://pandahya.github.io/q-sweeper/

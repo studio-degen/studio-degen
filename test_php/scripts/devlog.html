@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="utf-8">
     <title>Studio Degen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen" />
 </head>
 
 <!--General naming syntax used: camelCase-->
 <body>
-<!--header with studio name and logo, reused across pages-->
-<header>
-    <div id="headerFlex" class="flex">
-        <h1 id="title">STUDIO DEGEN</h1>
-        <div id="logo"></div>
+    <!--header with studio name and logo, reused across pages-->
+   <div id ="header">
+       <div id="headerFlex" class="flex">
+            <div id="title"><h1>STUDIO DEGEN</h1></div>
+            <div id="logo"></div>
+       </div>
+   </div>
+   <!--main body, changes across pages-->
+   <div id="menu">
+        <div id="menuObjectContainer">
+            <div id="menuObject" class="flexSpaceBtw">
+                <div id="circle"></div>
+                <a href="../index.html">Home</a>
+            </div>
+            <div id="menuObject" class="flexSpaceBtw">
+                <div id="circle"></div>
+                <a href="./projects.html">Project</a>
+            </div>
+            <div id="menuObject" class="flexSpaceBtw">
+                <div id="circle"></div>
+                <a href="./about.html">About</a>
+            </div>
+            <div id="menuObject" class="flexSpaceBtw">
+                <div id="circle"></div>
+                <a href="./devlog.html">Devlog</a>
+            </div>
+        </div>
     </div>
-
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="devlog.html">Devlog</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!--main body, changes across pages-->
-<main>
     <!--quantum arcade-->
-    <section id="devlog">
+    <div id="devlog">
        <h2>Devlog</h2> 
        <p>This is a devevlopment log.</p>
        <div id="contentPlacement" class="flexSpaceBtw">
@@ -68,25 +76,24 @@
                <button>other stuff</button>
            </div>
        </div>
-    </section>
-</main>
-
-<!--footer with socials, reused across pages-->
-<footer>
-    <div class="flexSpaceBtw">
-        <div id="footerWords" class="flex">
-            <p>words</p>
-            <p>words</p>
-            <p>words</p>
-            <p>words</p>
-        </div>
-        <div id="footerIcons" class="flex">
-            <div id="socials"></div>
-            <div id="socials"></div>
-            <div id="socials"></div>
-        </div>
     </div>
-</footer>  
+    
+    <!--footer with socials, reused across pages-->
+    <div id ="footer">
+        <div class="flexSpaceBtw">
+            <div id="footerWords" class="flex">
+                <p>words</p>
+                <p>words</p>
+                <p>words</p>
+                <p>words</p>
+            </div>
+            <div id="footerIcons" class="flex">
+                <div id="socials"></div>
+                <div id="socials"></div>
+                <div id="socials"></div>
+            </div>
+        </div>
+    </div>  
 </body>
 
 <script src="./scripts/main.js"></script>
