@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Studio Degen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" media="screen"/>
+</head>
+
+<!--General naming syntax used: camelCase-->
+<body>
+<!--header with studio name and logo, reused across pages-->
+<header>
+    <div id="headerFlex" class="flex">
+        <h1 id="title"><a href="index.html">STUDIO DEGEN</a></h1>
+        <div id="logo">
+            <!--Normal logo img-->
+            <img id="logo_img" src="./assets/logo.png" alt="Studio Degen logo">
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="devlog.html">Devlog</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--main body, changes across pages-->
+<main class="width">
+    <section>
+        <h3>Quantum Arcade</h3>
+        <p>Classic games with an added element of quanutm.</p>
+        <article class="projects">
+            <a href="projects/q-sweeper.html">
+                <figure class=project>
+                    <img src="">
+                    <figcaption class="projectName">Q-Sweeper</figcaption>
+                </figure>
+            </a>
+            <figure class=project>
+                <img src="">
+                <figcaption class="projectName">project name</figcaption>
+            </figure>
+            <figure class=project>
+                <img src="">
+                <figcaption class="projectName">project name</figcaption>
+            </figure>
+        </article>
+    </section>
+    <section>
+        <h3>Creative Code</h3>
+        <p>Description words</p>
+        <article class="projects">
+            <figure class=project>
+                <img src="">
+                <figcaption class="projectName">project name</figcaption>
+            </figure>
+            <figure class=project>
+                <img src="">
+                <figcaption class="projectName">project name</figcaption>
+            </figure>
+            <figure class=project>
+                <img src="">
+                <figcaption class="projectName">project name</figcaption>
+            </figure>
+            <figure class=project>
+                <img src="">
+                <figcaption class="projectName">project name</figcaption>
+            </figure>
+        </article>
+    </section>
+</main>
+
+<!--footer with socials, reused across pages-->
+<footer>
+    <p>Studio Degen © 2021</p>
+    <div id="footerIcons" class="flex">
+        <div id="socials"></div>
+        <div id="socials"></div>
+        <div id="socials"></div>
+    </div>
+</footer>   
+</body>
+<script src="./scripts/main.js"></script>
+</html> 
