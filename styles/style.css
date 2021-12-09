@@ -189,6 +189,32 @@ main a:hover {
   75%   {background-image: url("/assets/creative_coding_img/yiping-digital_divination.png");}
   100%  {background-image: url("/assets/creative_coding_img/frac1.jpg");}
 }
+.rArrow{
+  display: block;
+  transition: 1s ease-in;
+  animation: arrowBounceL 2s infinite;
+}
+.featText a h3, .rArrow h3{
+  color: var(--accentCol2);
+}
+.featText a h3:hover, .rArrow h3:hover{
+  color: var(--accentCol1);
+}
+@keyframes arrowBounceL{
+  0%    {padding-right: 0;}
+  50%   {padding-right: 20px;}
+  100%  {padding-right: 0;}
+}
+.dArrow{
+  display: block;
+  transition: 1s ease-in;
+  animation: arrowBounceD 2s infinite;
+}
+@keyframes arrowBounceD{
+  0%    {padding-bottom: 0;}
+  50%   {padding-bottom: 30px;}
+  100%  {padding-bottom: 0;}
+}
 
 .contactBox {
   border-color: var(--foreground);
