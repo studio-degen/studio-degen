@@ -176,18 +176,18 @@ main a:hover {
   background-image: url("/assets/q3.png");
 }
 #feat2Img{
-  background-image: url("/assets/creative_coding_img/frac1.jpg");
+  background-image: url("assets/creative_coding_img/frac1.jpg");
 }
 #feat2Img:hover{
   /* transition: opacity 1s ease-in-out; */
   animation: cycleImg 5s infinite;
 }
 @keyframes cycleImg{
-  0%    {background-image: url("/assets/creative_coding_img/frac1.jpg");}
-  25%   {background-image: url("/assets/drawing.png");}
-  50%   {background-image: url("/assets/creative_coding_img/tanvi-interactive_type.png");}
-  75%   {background-image: url("/assets/creative_coding_img/yiping-digital_divination.png");}
-  100%  {background-image: url("/assets/creative_coding_img/frac1.jpg");}
+  0%    {background-image: url("assets/creative_coding_img/frac1.jpg");}
+  25%   {background-image: url("assets/drawing.png");}
+  50%   {background-image: url("assets/creative_coding_img/tanvi-interactive_type.png");}
+  75%   {background-image: url("assets/creative_coding_img/yiping-digital_divination.png");}
+  100%  {background-image: url("assets/creative_coding_img/frac1.jpg");}
 }
 .rArrow{
   display: block;
