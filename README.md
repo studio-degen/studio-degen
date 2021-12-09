@@ -1,7 +1,7 @@
 # studio-degen
 a dictator, a criminal mastermind, a time traveler and a frog
 
-we make games
+we make things
 
 website:
 - https://pandahya.github.io/studio-degen/
