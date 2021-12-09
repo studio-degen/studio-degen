@@ -335,26 +335,16 @@ footer{
 /* PAGE 3: About */
 #abtPg {
   max-width: var(--innerHeightMargin) var(--outerMargin);
-  text-align: center;
+  /* text-align: center; */
 }
 .person {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid: 1fr / 0.4fr 0.6fr;
+  gap: 2vw;
   margin: var(--innerHeightMargin) 0;
-}
-.picture {
-  /* width: calc(0.45 * var(--innerContent));
-  height: calc(0.45 * var(--innerContent)); */
-  width: 50%;
-  /* background-color: var(--grey); */
 }
 .picture img{
   width: 100%;
-}
-#personText {
-  /* width: calc(0.45 * var(--innerContent)); */
-  width: 50%;
-  padding: 20px;
 }
 
 
