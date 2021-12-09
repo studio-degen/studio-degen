@@ -293,17 +293,21 @@ footer{
   height: calc(0.3 * var(--innerContent)); */
   width: 100%;
   height: 100%;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
   margin: 0;
   text-align: center;
 }
-.project:hover {
-  background-color: var(--accentCol2);
-}
+/* .project:hover {
+  mix-blend-mode: var(--accentCol1);
+} */
 .project:hover .projectName {
   opacity: 100%;
 }
+.project img{
+  width: 100%;
+}
 .project figcaption {
+  /* position:  */
   opacity: 0%;
 }
 
