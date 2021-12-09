@@ -69,7 +69,7 @@ header a, header a:visited{
 
 h1, h2, h3, h4, h5{
   color: var(--foreground);
-  margin: 0px;
+  margin: 10px 0;
 }
 h1 {
   font-family: terfens, sans-serif;
@@ -109,21 +109,24 @@ hr {
   width: 70vw;
   margin: 0 auto;
 }
-hr #tag {
-  width: calc(0.75 * var(--innerWidth));
+#tags hr {
+  width: 100%;
+  margin: 10px 0;
+  /* width: calc(0.75 * var(--innerWidth)); */
 }
 button {
   font-family: 'Work Sans', sans-serif;
   background-color: var(--grey);
   border: none;
-  float: right;
+  /* float: right; */
   padding: 1vh 1vw;
   text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
+  display: inline-block;
   font-size: 24px;
   border-radius: 25px;
-  margin: 4vh auto 0 auto;
+  /* margin: 4vh auto 0 auto; */
+  margin: 10px 5px;
 }
 a, a:visited{
   text-decoration: none;
@@ -353,7 +356,10 @@ footer{
 #tags h4 {
   text-align: right;
 }
-#individualPost {
+#tags button{
+  float: right;
+}
+.individualPost {
   border: 1px solid var(--foreground);
   padding: 30px;
   margin: calc(0.5 * var(--innerHeightMargin)) 0;
