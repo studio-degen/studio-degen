@@ -57,6 +57,9 @@ header a, header a:visited{
   padding: 10px;
   justify-content: space-between;
 }
+#title a:hover{
+  font-style: normal;
+}
 #logo {
   width: 85px;
   height: 100px;
@@ -131,12 +134,14 @@ button {
 a, a:visited{
   text-decoration: none;
 }
-
+a:hover{
+  font-style: italic;
+}
 main a, main a:visited{
-  color: var(--accentCol1);
+  color: var(--accentCol2);
 }
 main a:hover {
-  color: var(--accentCol2);
+  color: var(--accentCol1);
 }
 ::selection{
   background-color: var(--accentCol1);
@@ -171,7 +176,18 @@ main a:hover {
   background-image: url("/assets/q3.png");
 }
 #feat2Img{
-  background-image: url("/assets/drawing.png");
+  background-image: url("/assets/creative_coding_img/frac1.jpg");
+}
+#feat2Img:hover{
+  /* transition: opacity 1s ease-in-out; */
+  animation: cycleImg 5s infinite;
+}
+@keyframes cycleImg{
+  0%    {background-image: url("/assets/creative_coding_img/frac1.jpg");}
+  25%   {background-image: url("/assets/drawing.png");}
+  50%   {background-image: url("/assets/creative_coding_img/tanvi-interactive_type.png");}
+  75%   {background-image: url("/assets/creative_coding_img/yiping-digital_divination.png");}
+  100%  {background-image: url("/assets/creative_coding_img/frac1.jpg");}
 }
 
 .contactBox {
@@ -369,31 +385,20 @@ footer{
 }
 
 
-/* PAGE 5: Q-Sweeper */
-.date {
+/* PAGE 5: INDIVIDUAL PROJECT PAGE */
+#date {
   font-size: 30px;
   font-weight: 400;
   font-style: italic;
 }
-.projectBlurb {
-  max-width: calc(3 * var(--innerWidth));
-}
-.projectLink, .projectLink:visited {
-  font-size: 24px;
-  font-weight: 300;
-}
-.projectLink:hover {
-  font-style: italic;
-  /* opacity: 50%; */
-}
 #q-sweeper {
   margin: var(--innerHeightMargin) var(--outerMargin);
 }
-#mainImg {
-  height: 405px;
+#mainImg img {
+  /* height: 405px; */
   width: 100%;
   background-color: var(--grey);
-  margin: var(--innerHeightMargin) 0;
+  /* margin: var(--innerHeightMargin) 0; */
 }
 .gallery {
   display: grid;
