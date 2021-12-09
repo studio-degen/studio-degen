@@ -329,7 +329,10 @@ footer{
   /* width: calc(0.45 * var(--innerContent));
   height: calc(0.45 * var(--innerContent)); */
   width: 50%;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
+}
+.picture img{
+  width: 100%;
 }
 #personText {
   /* width: calc(0.45 * var(--innerContent)); */
