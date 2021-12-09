@@ -216,15 +216,6 @@ main a:hover {
   100%  {padding-bottom: 0;}
 }
 
-.contactBox {
-  border-color: var(--foreground);
-  border-style: solid;
-  border-width: 1px;
-  margin: 4vh auto 0 auto;
-  padding: 0 1vw;
-}
-
-
 #homepage {
   display: flex;
   flex-direction: column;
@@ -266,11 +257,19 @@ main a:hover {
 }
 #contact {
   max-width: calc(2.5 * var(--innerWidth));
-  margin: 0 auto;
+  margin: 150px auto;
 }
 #contact h3 {
   text-align: center;
 }
+.contactBox {
+  border-color: var(--foreground);
+  border-style: solid;
+  border-width: 1px;
+  margin: 4vh auto 0 auto;
+  padding: 0 1vw;
+}
+
 #centerText {
   text-align: center;
 }
