@@ -31,8 +31,8 @@ nav{
   position:fixed;
   height:0px;
   overflow: hidden;
-  top:95px;
-  right: 25px;
+  top:100px;
+  right: 4vw;
   text-align: right;
   line-height: 45px;
   font-weight: 500;
@@ -40,6 +40,31 @@ nav{
 }
 nav ul li{
   list-style-type: none;
+}
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  mix-blend-mode:difference; 
+}
+header a, header a:visited{
+  color: var(--foreground);
+}
+#headerFlex {
+  display: flex;
+  margin: 1vw;
+  padding: 10px;
+  justify-content: space-between;
+}
+#logo {
+  width: 85px;
+  height: 100px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+#logo_img{
+  width:85px;
 }
 
 h1, h2, h3, h4, h5{
@@ -81,7 +106,8 @@ figure{
   padding: 0;
 }
 hr {
-  width: 100%;
+  width: 70vw;
+  margin: 0 auto;
 }
 hr #tag {
   width: calc(0.75 * var(--innerWidth));
@@ -102,9 +128,7 @@ button {
 a, a:visited{
   text-decoration: none;
 }
-header a, header a:visited{
-  color: var(--foreground);
-}
+
 main a, main a:visited{
   color: var(--accentCol1);
 }
@@ -125,19 +149,28 @@ main a:hover {
   text-align: center;
 }
 #featured article{
-  display: flex;
-  align-self: flex-end;
+  display: grid;
+  grid: 1fr / 0.35fr 0.65fr;
   margin: 50px 0;
+  gap: 2vw;
+}
+.featText{
+  text-align: right;
 }
 .featuredImage {
-  padding-left: 15vw;
-  width: 55vw;
+  /* width: 55vw; */
   height: 80vh;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
+  background-position: center;
+  background-size:cover;
 }
-.profile {
-  width: var(--innerWidth);
+#feat1Img{
+  background-image: url("/assets/q3.png");
 }
+#feat2Img{
+  background-image: url("/assets/drawing.png");
+}
+
 .contactBox {
   border-color: var(--foreground);
   border-style: solid;
@@ -145,30 +178,7 @@ main a:hover {
   margin: 4vh auto 0 auto;
   padding: 0 1vw;
 }
-header {
-  position: fixed;
-  width: 100vw;
-  z-index: 2;
-  top: 0;
-  mix-blend-mode:difference; 
-}
-#headerFlex {
-  display: flex;
-  margin: 1vw;
-  padding: 10px;
-  justify-content: space-between;
-}
 
-#logo {
-  width: 85px;
-  height: 100px;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
-}
-
-#logo_img{
-  width:85px;
-}
 
 #homepage {
   display: flex;
@@ -186,7 +196,7 @@ header {
   background-color: var(--black);
 }
 #featured {
-  padding: 20vh 0 10vh 20vw;
+  margin: var(--outerHeightMargin) 0 var(--outerHeightMargin) 20vw;
 }
 #about {
   margin: var(--outerHeightMargin) var(--outerMargin);
@@ -194,8 +204,18 @@ header {
 #info{
   text-align: center;
 }
+.profile {
+  width: var(--innerWidth);
+  margin: 10px;
+}
+.profile p{
+  text-align: center;
+}
+.profile figure img{
+  height: calc(0.9 * var(--innerWidth));
+}
 #profilePhoto {
-  width: calc(0.9 * var(--innerWidth));
+  /* width: calc(0.9 * var(--innerWidth)); */
   height: calc(0.9 * var(--innerWidth));
   background-color: var(--grey);
 }
