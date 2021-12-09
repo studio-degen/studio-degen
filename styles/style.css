@@ -265,17 +265,14 @@ main a:hover {
   background-color: var(--grey);
 }
 #contact {
-  margin: var(--outerHeightMargin) var(--outerMargin);
+  max-width: calc(2.5 * var(--innerWidth));
+  margin: 0 auto;
 }
 #contact h3 {
   text-align: center;
 }
 #centerText {
   text-align: center;
-}
-#contactForm {
-  max-width: calc(2.5 * var(--innerWidth));
-  margin: 0 auto;
 }
 
 footer{
@@ -288,7 +285,7 @@ footer{
 #footerIcons {
   margin: auto 0;
 }
-#socials {
+.socials {
   background-color: var(--grey);
   width: 40px;
   height: 40px;
