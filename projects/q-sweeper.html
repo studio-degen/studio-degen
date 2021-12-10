@@ -35,16 +35,21 @@
         <h3>Q-Sweeper</h3> 
         <p id="date">2021</p>
         <p id="brief">
-            Q-sweeper stands for quantum minesweeper. The traditional game is redesigned by applying quantum concepts to it, such as noise and entanglement. The maps are generated using data from a quantum algorithm to place the mines in the game.
+            Q-sweeper stands for quantum minesweeper. The original game is redesigned by applying quantum concepts–noise and entanglement–to it. The minesweeper maps and mine placement is generated using data from a quantum algorithm.
             <br>
-            For next steps, we are exploring entanglement further by using socket connections to entangle multiple ongoing games. This project is being set up for an interactive installation that further explores the intersections of games and quantum computing. 
+            <br>
+            We are further exploring entanglement using socket connections to entangle multiple ongoing games. This project is being set up as an interactive installation that further explores the intersections of games and quantum computing. More details coming soon...
+            <br>
+            <br>
+            This project was built as a part of the Quantum Design Jam hosted by The New School in partnership with the IBM Skills Academy and IBM Quantum team
+            <br>
             <br>
             The code is open-source and the game can be played in the browser.
         </p>
         <p>
             <a class="projectLink" href="https://pandahya.github.io/q-sweeper/">link to play →</a>
             <br>
-            <a class="projectLink" href="https://pandahya.github.io/q-sweeper/">link to Github repo →</a>
+            <a class="projectLink" href="https://github.com/pandahya/q-sweeper">link to Github repo →</a>
         </p>
         
         <figure id="mainImg">
@@ -74,17 +79,7 @@
     
     <section>
         <h3>Documentation</h3>
-        <p>here are explanatory words and images that serve as our project 
-            documentation words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words
+        <p> We created the maps using Bernstein-Vazirani algorithm, an extension of the Deutch-Jozsa algorithm. The 1024 tiles in our board correspond to 1 out of the 1024 shots taken on the quantum computer. Thus, the map transforms into a visualisation of the data and its associated noise. 
         </p>
         <div class="gallery">
             <figure>
@@ -94,31 +89,46 @@
                 <img src="">
             </figure>
         </div>
-        <p>here are explanatory words and images that serve as our project 
-            documentation words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words
+        <p>
+            The game has two main features: entangled mines and interfering tomatoes. A percentage of the mines are pre-determined to be entangled mines. These mines are interconnected with 2 or 2 other mines. Opening one of these mines will reveal the other mines, but will not end the game. The number of tomatoes are dictated by a percentage of the q-bit data and are placed randomly across the board covering blank and numbered tiles making the game harder for the player. 
+        </p>
+        <div class="gallery">
+            <figure>
+                <img src="">
+            </figure>
+            <figure>
+                <img src="">
+            </figure>
+        </div>
+        <p>
+            The sound effects in the game were also created using the Quantum Music Playground.
+            <br>
+            For a more in-depth explanation and game walkthrough, watch our <a href="https://youtu.be/8wWyJAOBWls" target="_blank" rel="noopener noreferrer">video</a>. Click to view <a href="" target="_blank" rel="noopener noreferrer">transcript</a>.
         </p>
     </section>
 
     <section>
         <h3>References</h3>
-        <p>here we’ll put any research we did or references found or used in 
-            the form of both images and text etc words words words words words
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words
+        <p>
+            We ran our algorithm on the lima quantum computers from <a href="https://qiskit.org/" target="_blank" rel="noopener noreferrer"> IBM's Qiskit starter kit</a>. 
+            Our sound was built on <a href="https://www.ableton.com/en/" target="_blank" rel="noopener noreferrer">Ableton</a> using the <a href="https://github.com/JavaFXpert/quantum-music-playground" target="_blank" rel="noopener noreferrer">Quantum Music Playground</a>. 
+            <br>
+            The javascript code was built on top of a coding train <a href="https://editor.p5js.org/codingtrain/sketches/-mz-ePoqd" target="_blank" rel="noopener noreferrer">minesweeper project</a> and 
+            the flagging was based on the code <a href="https://github.com/mikolajfrohmberg/p5.js-Minesweeper" target="_blank" rel="noopener noreferrer"> here</a>.
+        </p>
+    </section>
+    <section>
+        <h3>Team</h3>
+        <p>
+            Apurv Rayate: Game development, Quantum Computing
+            <br>
+            Hyacinth Weng: Game development, Front-end development, Asset Creation
+            <br>
+            Shangshang Li: Game development, Back-end development, Sound Design
+            <br>
+            Tanvi Mishra: Game development, Back-end development 
+            <br>
+            Yiping Dong: Game development Sound Design, Video Editing and Animations
         </p>
     </section>
 </main>
