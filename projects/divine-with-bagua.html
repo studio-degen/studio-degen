@@ -7,6 +7,21 @@
     <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/>
 </head>
 
+<style>
+    #mainInfo{
+        height:280px;
+    }
+
+   .gallery img{
+        display: block;
+        margin:0 auto;
+        width:50%;
+        height:auto;
+        padding:5px;
+        background-color: white;
+    }
+</style>
+
 <!--General naming syntax used: camelCase-->
 <body>
 <!--header with studio name and logo, reused across pages-->
@@ -32,25 +47,35 @@
 <!--main body, changes across pages-->
 <main class="width">
     <section id="mainInfo">
-        <h3>proj title</h3> 
-        <p id="date">year</p>
+        <h3>Divine with Bagua</h3> 
+        <p id="date">2021</p>
         <p id="brief">
-            project brief description
+            In this project, I created a digital divination tool with p5.js. It is based on Chinese Bagua and users can get their divination based on the Bagua symbol they chose.
             <br>
-            project brief description
+            The opening screen is a scene of Chinese Daoism temple, and the user will be able to get the divination by dragging on the screen.
+            <br>
+            Once the user picks a symbol and clicks "Get Fortune", the result of the divination will appear under the canvas.
         </p>
         <p>
-            <a class="projectLink" href="#">link to whatever →</a>
+            <a class="projectLink" href="https://editor.p5js.org/YipingDong/full/FP1ZYae5e">link to Divine with Bagua →</a>
             <br>
-            <a class="projectLink" href="#">link to whatever→</a>
+            <a class="projectLink" href="https://editor.p5js.org/YipingDong/sketches/FP1ZYae5e">link to Code →</a>
+            <br>
+            
         </p>
-        
-        <figure id="mainImg">
+        <!-- <figure id="mainImg">
             <img src="">
-        </figure>
+        </figure> -->
     </section>
-    <section class="gallery">
+    
+<section class="gallery">
         <figure>
+            <img src="../assets/creative_coding_img/bagua-imgs/bagua-start.png">
+        </figure>
+            <figure>
+            <img src="../assets/creative_coding_img/bagua-imgs/bagua-full.png" alt="Divine with Bagua full image">
+        </figure>
+        <!-- <figure>
             <img src="">
         </figure>
         <figure>
@@ -61,30 +86,20 @@
         </figure>
         <figure>
             <img src="">
-        </figure>
-        <figure>
-            <img src="">
-        </figure>
-        <figure>
-            <img src="">
-        </figure>
+        </figure> -->
     </section>
     
     <section>
         <h3>Documentation</h3>
-        <p>here are explanatory words and images that serve as our project 
-            documentation words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words
+        <p>
+            I don't have deep knowledge of Bagua either, but my interest in it drove me to research and learn about the basic representations of the symbols, which I later turned into this project.
+            <br>
+            It is a piece that gives the user a tiny touch on the mysterious Chinese Bagua.
+            <br>
+            <br>
+            It was really challenging to make the rotating wheel and get the fortune only to display after the button is clicked.
         </p>
-        <div class="gallery">
+        <!-- <div class="gallery">
             <figure>
                 <img src="">
             </figure>
@@ -103,20 +118,21 @@
             words words words words words words words words words words words 
             words words words words words words words words words words words 
             words words words words words
-        </p>
+        </p> -->
     </section>
 
     <section>
         <h3>References</h3>
-        <p>here we’ll put any research we did or references found or used in 
-            the form of both images and text etc words words words words words
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words
+        <p>
+            I tried many ways of approching the rotatable wheel, started with basing it one a <a href="https://editor.p5js.org/icm/sketches/HkfFHcp2">Rotating Wheel Reference</a>, but the calculation of the space between each symbol in the example is not working very well.<br>
+            This ended up basing on the <a href="https://p5js.org/examples/form-regular-polygon.html">Regular Polygon Example</a>.
+            <br>
+            <br>
+            I also later turned this project in to a random picker in the same rotating wheel format.
+            <br>
+            <a class="projectLink" href="https://editor.p5js.org/YipingDong/full/r5fIZvZm0">link to p5.Library.RandomPicker →</a>
+            <br>
+            <a class="projectLink" href="https://editor.p5js.org/YipingDong/sketches/r5fIZvZm0">link to code →</a>
         </p>
     </section>
 </main>
