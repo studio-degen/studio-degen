@@ -231,7 +231,7 @@ main a:hover {
   width: 40vw;
   height: 40vw;
   border-radius: 50%;
-  background-color: var(--black);
+  /* background-color: var(--foreground); */
 }
 #featured {
   margin: var(--outerHeightMargin) 0 var(--outerHeightMargin) 20vw;
