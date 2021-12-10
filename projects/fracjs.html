@@ -7,6 +7,23 @@
     <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/>
 </head>
 
+<style>
+    code {
+        color: white;
+        font-size: x-large;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mainImg {
+        width: 80%;
+        height: auto;
+    }
+</style>
+
 <!--General naming syntax used: camelCase-->
 <body>
 <!--header with studio name and logo, reused across pages-->
@@ -32,93 +49,108 @@
 <!--main body, changes across pages-->
 <main class="width">
     <section id="mainInfo">
-        <h3>proj title</h3> 
-        <p id="date">year</p>
+        <h3>frac.js</h3> 
+        <p id="date">2021</p>
         <p id="brief">
-            project brief description
+            A fractal is a repeating self-similar image.
             <br>
-            project brief description
+            frac.js is a p5 library that allows you to create simple recursive fractals using images. Using pngs is recommended.
         </p>
         <p>
-            <a class="projectLink" href="#">link to whatever →</a>
-            <br>
-            <a class="projectLink" href="#">link to whatever→</a>
+            <a class="projectLink" href="https://editor.p5js.org/rayateapurv/sketches/MuuZis0WU">link to library file→</a>
         </p>
         
         <figure id="mainImg">
-            <img src="">
+            <img src="../assets/creative_coding_img/frac-imgs/main.jpg">
         </figure>
     </section>
+
+    <br>
+
+    <section>
+        <h3>Documentation</h3>
+        <h4>Basic Fractal Function</h4>
+        <code>
+            basicFractal(img, x, y, w, h, limit, scaling, [xoffset], [yoffset], [rotation], [offsetscaling])
+        </code>
+    
+        <p>
+            Draws a simple, unidirectional fractal.
+            <br><br>
+            Parameters:
+            <br>
+            img: The image you want to replicate. This should be preloaded into a variable in p5.
+            <br>
+            x: The x-coordinate of the starting fractal.
+            <br>
+            y: The y-coordinate of the starting fractal.
+            <br>
+            w: The width of the starting fractal in pixels.
+            <br>
+            h: The height of the starting fractal in pixels.
+            <br>
+            limit: The limit to which you want the fractal to repeat in pixels. Recommended 20.
+            <br>
+            scaling: Fractals in this library scale down. This determines the amount of scaling. Should input a value between 0.75 and 0.99.
+            <br>
+            xoffset: Amount of x-offset on the next copy. Optional.
+            <br>
+            yoffset: Amount of y-offset on the next copy. Optional.
+            <br>
+            rotation: Amount of rotation on the next copy. Rotation is affected by the scaling value. Optional.
+            <br>
+            offsetscaling: This determines if offsets are scaled by the scaling value. Input true or false. Default false. Optional.  
+        </p>
+
+        <h4>Particle Fractal Function</h4>
+        <code>
+            particleFractal(img, x, y, w, h, limit, scaling, showPercent, [randomRotate])
+        </code>
+
+        <p>
+            Draws a pseudo particle system fractal.
+            <br><br>
+            Parameters:            
+            <br>            
+            img: The image you want to replicate. This should be preloaded into a variable in p5.           
+            <br>           
+            x: The x-coordinate of the starting fractal.           
+            <br>
+            y: The y-coordinate of the starting fractal.
+            <br>          
+            w: The width of the starting fractal in pixels.         
+            <br>         
+            h: The height of the starting fractal in pixels.          
+            <br>           
+            limit: The limit to which you want the fractal to repeat in pixels. Recommended 20.           
+            <br>         
+            scaling: Fractals in this library scale down. This determines the amount of scaling. Should input a value between 0.75 and 0.99.          
+            <br>            
+            showPercent: This sets the amount of copies from the grid to be randomly shown. Input value between 0.0001 and 0.2.            
+            <br>            
+            randomRotate: Randomly rotates all shown copies. Input true or false. Default false. Optional.            
+        </p>
+    </section>
+    
     <section class="gallery">
+        <h3>Examples</h3> 
         <figure>
-            <img src="">
+            <img src="../assets/creative_coding_img/frac-imgs/frac1.png">
         </figure>
         <figure>
-            <img src="">
+            <img src="../assets/creative_coding_img/frac-imgs/frac2.png">
         </figure>
         <figure>
-            <img src="">
+            <img src="../assets/creative_coding_img/frac-imgs/frac3.png">
         </figure>
         <figure>
-            <img src="">
+            <img src="../assets/creative_coding_img/frac-imgs/frac4.png">
         </figure>
         <figure>
-            <img src="">
-        </figure>
-        <figure>
-            <img src="">
+            <img src="../assets/creative_coding_img/frac-imgs/frac5.png">
         </figure>
     </section>
     
-    <section>
-        <h3>Documentation</h3>
-        <p>here are explanatory words and images that serve as our project 
-            documentation words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words
-        </p>
-        <div class="gallery">
-            <figure>
-                <img src="">
-            </figure>
-            <figure>
-                <img src="">
-            </figure>
-        </div>
-        <p>here are explanatory words and images that serve as our project 
-            documentation words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words
-        </p>
-    </section>
-
-    <section>
-        <h3>References</h3>
-        <p>here we’ll put any research we did or references found or used in 
-            the form of both images and text etc words words words words words
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words
-        </p>
-    </section>
 </main>
 
 <!--footer with socials, reused across pages-->
