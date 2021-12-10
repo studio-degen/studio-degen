@@ -110,6 +110,11 @@ figure{
   margin: 0;
   padding: 0;
 }
+figcaption{
+  color: var(--foreground);
+  text-align: center;
+  margin: 5px 0;
+}
 hr {
   width: 70vw;
   margin: 0 auto;
@@ -408,6 +413,9 @@ footer{
 }
 #q-sweeper {
   margin: var(--innerHeightMargin) var(--outerMargin);
+}
+#mainInfo{
+  height: 900px
 }
 #mainImg img {
   /* height: 405px; */

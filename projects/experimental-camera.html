@@ -7,6 +7,64 @@
     <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/>
 </head>
 
+<style>
+    #cycle1,#cycle2,#cycle3,#cycle4{
+        visibility: visible;
+        position: absolute;
+        width: 100%;
+    }
+    #cycle2,#cycle3,#cycle4{
+        visibility: hidden;
+    }
+    .cycle{
+        position: relative;
+        height: min-content;
+    }
+    #cycle1{
+        animation: gif1 5s infinite;
+    }
+    @keyframes gif1{
+        0%  {visibility: visible;}
+        25% {visibility: visible;}
+        50% {visibility: hidden;}
+        75% {visibility: hidden;}
+        100%{visibility: visible;}
+    }
+    #cycle2{
+        animation: gif2 5s infinite;
+    }
+    @keyframes gif2{
+        0%  {visibility: hidden;}
+        25% {visibility: hidden;}
+        50% {visibility: visible;}
+        75% {visibility: hidden;}
+        100%{visibility: hidden;}
+    }
+    #cycle3{
+        animation: gif3 5s infinite;
+    }
+    @keyframes gif3{
+        0%  {visibility: hidden;}
+        25% {visibility: hidden;}
+        50% {visibility: hidden;}
+        75% {visibility: visible;}
+        100%{visibility: hidden;}
+    }
+    #cycle4{
+        animation: gif4 5s infinite;
+    }
+    @keyframes gif4{
+        0%  {visibility: hidden;}
+        25% {visibility: hidden;}
+        50% {visibility: hidden;}
+        75% {visibility: hidden;}
+        100%{visibility: visible;}
+    }
+    .gallery{
+        position:relative;
+    }
+</style>
+
 <!--General naming syntax used: camelCase-->
 <body>
 <!--header with studio name and logo, reused across pages-->
@@ -46,8 +104,14 @@
             <a href="https://editor.p5js.org/pandahya/sketches/lsv4iJA6l" target="_blank" rel="noopener noreferrer">link to code &rarr;</a>
         </p>
         
-        <figure id="mainImg">
+        <!-- <figure id="mainImg">
             <img src="../assets/drawing.png" alt="image of drawing made with experimental camera">
+        </figure> -->
+        <figure id="mainImg" class="cycle">
+            <img id="cycle1" src="../assets/expcam5.png" alt="image of drawing made with experimental camera">
+            <img id="cycle2" src="../assets/expcam6.png" alt="image of drawing made with experimental camera">
+            <img id="cycle3" src="../assets/expcam7.png" alt="image of drawing made with experimental camera">
+            <img id="cycle4" src="../assets/expcam8.png" alt="image of drawing made with experimental camera">
         </figure>
     </section>
     <section class="gallery">
@@ -57,61 +121,69 @@
         <figure>
             <img src="../assets/expcam2.png" alt="image of drawing made with experimental camera">
         </figure>
+        <!-- <figure class="cycle">
+            <img id="cycle1" src="../assets/expcam5.png" alt="image of drawing made with experimental camera">
+            <img id="cycle2" src="../assets/expcam6.png" alt="image of drawing made with experimental camera">
+            <img id="cycle3" src="../assets/expcam7.png" alt="image of drawing made with experimental camera">
+            <img id="cycle4" src="../assets/expcam8.png" alt="image of drawing made with experimental camera">
+        </figure> -->
         <figure>
-            <img src="../assets/expcam3.png" alt="image of drawing made with experimental camera">
+            <img src="../assets/expcam9.png" alt="image of drawing made with experimental camera">
         </figure>
         <figure>
-            <img src="../assets/expcam4.png" alt="image of drawing made with experimental camera">
+            <img src="../assets/drawing.png" alt="image of drawing made with experimental camera">
         </figure>
     </section>
     
     <section>
         <h3>Documentation</h3>
-        <p>here are explanatory words and images that serve as our project 
-            documentation words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words
+        <p>
+            I started off knowing I wanted to do something with the color pixels. One of the things I associate with "the camera" and photography is color. And since the webcamera information is in pixels, I thought that would be fun to play with.
+            <br>
+            I also wanted to focus on the facial features because I think that these are the parts of the face that basically communicate everything. You can consider the rest of the face less necessary. And since I've been staring at my face all day on Zoom, I've become super self conscious, so why not just get rid of everything unnecessary on my face and just replace it with something more interesting. Not exactly sure what I wanted to be doing with the color pixels, I decided on letting the user have control over that. And so my project would be isolating the different color categories and allowing the user to draw on the screen with that. 
         </p>
         <div class="gallery">
             <figure>
-                <img src="">
+                <img src="https://pandahya.github.io/portfolio/imgs/ecam1.jpeg" alt="Hyacinth's initial sketches of the project">
+                <figcaption>sketches</figcaption>
             </figure>
             <figure>
-                <img src="">
+                <img src="https://pandahya.github.io/portfolio/imgs/ecam2.png" alt="screenshot of an initial prototype that draws red and blue blobs and pixels on screen accompanied with a full camera visual of what's going on in front of the camera">
+                <figcaption>intial prototype</figcaption>
             </figure>
         </div>
-        <p>here are explanatory words and images that serve as our project 
-            documentation words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words
+        <p>
+            The biggest component of this project was being able have pixels in certain color ranges grouped together as one color, and to draw those pixels on the canvas.
+            <br>
+            I started off with testing just red and blue and found that, since color information on a screen is divided into R, G, & B channels, it was actually quite difficult to separate colors cleanly. The camera doesn't register and recognize color the way humans do, so lighting, especially low lighting, affected the registering of colors. 
+        </p>
+        <div class="gallery">
+            <figure>
+                <img src="../assets/creative_coding_img/expcam.png" alt="white canvas with red and blue blobs and pixels, and hyacinth's eyes and nose peeking through via three circles in the white canvas background">
+                <figcaption>first sketch with clmtrackr</figcaption>
+            </figure>
+            <figure>
+                <img style="background-color: white;"src="../assets/expcam3.png" alt="white canvas with hyacinth's eyes and mouth in rectangles, in front of blue blobs drawn on the canvas">
+                <figcaption>early sketch with eyes+mouth</figcaption>
+            </figure>
+        </div>
+        <p>
+            To add my face to the sketch, I separated the color drawing layer and the face layer with createGraphics(). My initial idea was to keep the face above the layer of color pixels being drawn, but I wasn't able to work out a simple solution, so the colors are drawn above the face. But because of this problem I thought of adding the face as one of the drawing options, so you could actually see the face if you wanted over the colors. And that worked out really nice.
+            <br>
+            Working with clmtrackr, I took the points from the corners of the mouth and the corners of the eyes to draw rectangles around them as the area to show on the canvas. I initially had circles but rectangles were more flexible. I removed the nose and added the eyebrows because I thought the eyebrows were much more crucial to facial expression and communication than the nose.
+            <br>
+            I excluded black and white and brown because of lighting as well and to allow the other 7 colors a bigger range. Multiple colors can be selected at once and drawn on the canvas, and the image can be downloaded at the end if so wished. 
         </p>
     </section>
 
     <section>
         <h3>References</h3>
-        <p>here we’ll put any research we did or references found or used in 
-            the form of both images and text etc words words words words words
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words 
-            words words words words words words words words words words words
+        <p>
+            I used <a href="https://github.com/auduno/clmtrackr" target="_blank" rel="noopener noreferrer"> clmtrackr</a>, a javascript library, to track points on the face, and <a href="https://p5js.org/" target="_blank" rel="noopener noreferrer">p5.js</a> to draw everything on the html canvas.
+            <br>
+            I was inspired by <a href="https://editor.p5js.org/generative-design/sketches/P_4_3_3_02" target="_blank" rel="noopener noreferrer">this</a> sketch and <a href="http://www.generative-gestaltung.de/2/#sketches" target="_blank" rel="noopener noreferrer">other examples</a> from P.4:Image of the book <a href="https://papress.com/products/generative-design-revised-and-updated-edition-visualize-program-and-create-with-javascript-in-p5js" target="_blank" rel="noopener noreferrer">Generative Design</a> by Benedikt Gross, Claudius Lazzeroni, Hartmut Bohnacker and Julia Laub.
+            <br>
+            Some faces show in images courtesy of my friends!!
         </p>
     </section>
 </main>
