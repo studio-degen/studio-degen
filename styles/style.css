@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
 @import url("https://use.typekit.net/dpx2cqa.css");
 
 :root {
@@ -18,27 +18,27 @@ body {
   padding: 0px;
   position: relative;
   background-color: var(--background);
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
-.width{
+.width {
   max-width: 900px;
   margin: var(--outerHeightMargin) auto 0 auto;
 }
-.width section{
+.width section {
   margin: 50px 0 150px 0;
 }
-nav{
-  position:fixed;
-  height:0px;
+nav {
+  position: fixed;
+  height: 0px;
   overflow: hidden;
-  top:100px;
+  top: 100px;
   right: 4vw;
   text-align: right;
   line-height: 45px;
   font-weight: 500;
   transition: 0.5s ease-in-out;
 }
-nav ul li{
+nav ul li {
   font-weight: 500;
   font-size: 1.5em;
   list-style-type: none;
@@ -48,9 +48,10 @@ header {
   width: 100vw;
   z-index: 2;
   top: 0;
-  mix-blend-mode:difference; 
+  mix-blend-mode: difference;
 }
-header a, header a:visited{
+header a,
+header a:visited {
   color: var(--foreground);
 }
 #headerFlex {
@@ -59,7 +60,7 @@ header a, header a:visited{
   padding: 10px;
   justify-content: space-between;
 }
-#title a:hover{
+#title a:hover {
   font-style: normal;
 }
 #logo {
@@ -68,11 +69,15 @@ header a, header a:visited{
   overflow: hidden;
   transition: 0.5s ease-in-out;
 }
-#logo_img{
-  width:85px;
+#logo_img {
+  width: 85px;
 }
 
-h1, h2, h3, h4, h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   color: var(--foreground);
   margin: 10px 0;
 }
@@ -106,11 +111,11 @@ p {
   font-size: 1.5em;
   font-weight: 300;
 }
-figure{
+figure {
   margin: 0;
   padding: 0;
 }
-figcaption{
+figcaption {
   color: var(--foreground);
   text-align: center;
   margin: 5px 0;
@@ -125,7 +130,7 @@ hr {
   /* width: calc(0.75 * var(--innerWidth)); */
 }
 button {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: var(--grey);
   border: none;
   /* float: right; */
@@ -138,23 +143,25 @@ button {
   /* margin: 4vh auto 0 auto; */
   margin: 10px 5px;
 }
-a, a:visited{
+a,
+a:visited {
   text-decoration: none;
 }
-a:hover{
+a:hover {
   font-style: italic;
 }
-main a, main a:visited{
+main a,
+main a:visited {
   color: var(--accentCol2);
 }
 main a:hover {
   color: var(--accentCol1);
 }
-::selection{
+::selection {
   background-color: var(--accentCol1);
 }
 
-.flex{
+.flex {
   display: flex;
 }
 .fullHeight {
@@ -163,13 +170,13 @@ main a:hover {
 .alignCenter {
   text-align: center;
 }
-#featured article{
+#featured article {
   display: grid;
   grid: 1fr / 0.35fr 0.65fr;
   margin: 50px 0;
   gap: 2vw;
 }
-.featText{
+.featText {
   text-align: right;
 }
 .featuredImage {
@@ -177,50 +184,74 @@ main a:hover {
   height: 80vh;
   /* background-color: var(--grey); */
   background-position: center;
-  background-size:cover;
+  background-size: cover;
 }
-#feat1Img{
+#feat1Img {
   background-image: url("../assets/q3.png");
 }
-#feat2Img{
+#feat2Img {
   background-image: url("../assets/creative_coding_img/frac1.jpg");
 }
-#feat2Img:hover{
+#feat2Img:hover {
   /* transition: opacity 1s ease-in-out; */
   animation: cycleImg 5s infinite;
 }
-@keyframes cycleImg{
-  0%    {background-image: url("../assets/creative_coding_img/frac1.jpg");}
-  25%   {background-image: url("../assets/drawing.png");}
-  50%   {background-image: url("../assets/creative_coding_img/tanvi-interactive_type.png");}
-  75%   {background-image: url("../assets/creative_coding_img/yiping-digital_divination.png");}
-  100%  {background-image: url("../assets/creative_coding_img/frac1.jpg");}
+@keyframes cycleImg {
+  0% {
+    background-image: url("../assets/creative_coding_img/frac1.jpg");
+  }
+  25% {
+    background-image: url("../assets/drawing.png");
+  }
+  50% {
+    background-image: url("../assets/creative_coding_img/tanvi-interactive_type.png");
+  }
+  75% {
+    background-image: url("../assets/creative_coding_img/yiping-digital_divination.png");
+  }
+  100% {
+    background-image: url("../assets/creative_coding_img/frac1.jpg");
+  }
 }
-.rArrow{
+.rArrow {
   display: block;
   transition: 1s ease-in;
   animation: arrowBounceL 2s infinite;
 }
-.featText a h3, .rArrow h3{
+.featText a h3,
+.rArrow h3 {
   color: var(--accentCol2);
 }
-.featText a h3:hover, .rArrow h3:hover{
+.featText a h3:hover,
+.rArrow h3:hover {
   color: var(--accentCol1);
 }
-@keyframes arrowBounceL{
-  0%    {padding-right: 0;}
-  50%   {padding-right: 20px;}
-  100%  {padding-right: 0;}
+@keyframes arrowBounceL {
+  0% {
+    padding-right: 0;
+  }
+  50% {
+    padding-right: 20px;
+  }
+  100% {
+    padding-right: 0;
+  }
 }
-.dArrow{
+.dArrow {
   display: block;
   transition: 1s ease-in;
   animation: arrowBounceD 2s infinite;
 }
-@keyframes arrowBounceD{
-  0%    {padding-bottom: 0;}
-  50%   {padding-bottom: 30px;}
-  100%  {padding-bottom: 0;}
+@keyframes arrowBounceD {
+  0% {
+    padding-bottom: 0;
+  }
+  50% {
+    padding-bottom: 30px;
+  }
+  100% {
+    padding-bottom: 0;
+  }
 }
 
 #homepage {
@@ -244,17 +275,17 @@ main a:hover {
 #about {
   margin: var(--outerHeightMargin) var(--outerMargin);
 }
-#info{
+#info {
   text-align: center;
 }
 .profile {
   width: var(--innerWidth);
   margin: 10px;
 }
-.profile p{
+.profile p {
   text-align: center;
 }
-.profile figure img{
+.profile figure img {
   height: calc(0.9 * var(--innerWidth));
 }
 #profilePhoto {
@@ -281,7 +312,7 @@ main a:hover {
   text-align: center;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: space-between;
   /* padding: 0 var(--outerMargin); */
@@ -306,20 +337,20 @@ footer{
   width: 20vw;
   margin: 5vh 1vw;
 }
-#jumpTo li{
+#jumpTo li {
   color: var(--foreground);
   display: flex;
   list-style-type: none;
   margin: 10px 0;
 }
-#jumpTo a{
+#jumpTo a {
   margin: 0 0 0 10px;
   display: block;
   height: 100%;
   text-decoration: none;
   opacity: 0%;
 }
-#jumpTo a:hover{
+#jumpTo a:hover {
   opacity: 100%;
 }
 .circle {
@@ -330,14 +361,13 @@ footer{
   border-radius: 50%;
 }
 
-
 /* PAGE 2: Projects */
 .projects {
   display: grid;
   grid: 1fr / 1fr 1fr 1fr;
   gap: 2vh 2vw;
 }
-.project{
+.project {
   /* width: calc(0.3 * var(--innerContent));
   height: calc(0.3 * var(--innerContent)); */
   width: 100%;
@@ -352,14 +382,13 @@ footer{
 .project:hover .projectName {
   opacity: 100%;
 }
-.project img{
+.project img {
   width: 100%;
 }
 .project figcaption {
   /* position:  */
   opacity: 0%;
 }
-
 
 /* PAGE 3: About */
 #abtPg {
@@ -372,13 +401,12 @@ footer{
   gap: 2vw;
   margin: var(--innerHeightMargin) 0;
 }
-.picture img{
+.picture img {
   width: 100%;
 }
 
-
 /* PAGE 4: Devlog */
-#devlog{
+#devlog {
   display: flex;
   justify-content: space-between;
 }
@@ -395,7 +423,7 @@ footer{
 #tags h4 {
   text-align: right;
 }
-#tags button{
+#tags button {
   float: right;
 }
 .individualPost {
@@ -403,7 +431,6 @@ footer{
   padding: 30px;
   margin: calc(0.5 * var(--innerHeightMargin)) 0;
 }
-
 
 /* PAGE 5: INDIVIDUAL PROJECT PAGE */
 #date {
@@ -414,8 +441,8 @@ footer{
 #q-sweeper {
   margin: var(--innerHeightMargin) var(--outerMargin);
 }
-#mainInfo{
-  height: 900px
+#mainInfo {
+  height: 900px;
 }
 #mainImg img {
   /* height: 405px; */
@@ -429,9 +456,18 @@ footer{
   gap: 2vh 2vw;
   margin: var(--innerHeightMargin) 0;
 }
-.gallery figure img{
+.gallery figure img {
   /* background-color: #564fa1; */
   /* height: 100%; */
+  width: 100%;
+}
+.gallery_small {
+  display: grid;
+  grid: 1fr / 1fr 1fr 1fr 1fr;
+  gap: 2vh 2vw;
+  margin: var(--innerHeightMargin) 0;
+}
+.gallery_small figure img {
   width: 100%;
 }
 .imagex2 {
