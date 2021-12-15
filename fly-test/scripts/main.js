@@ -5,14 +5,16 @@ let frog;
 function preload() {
     flyimg1 = loadImage('../assets/img/fly1.png');
     flyimg2 = loadImage('../assets/img/fly2.png');
+    frog = loadImage('../assets/img/frog.png');
 }
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
 
     noStroke();
+    frameRate(30);
 
-    frog = new Frog();
+    //frog = new Frog();
 
     for (let i = 0; i < 20; i++) {
         flies.push(new Fly());       
@@ -22,15 +24,13 @@ function setup() {
 
 function draw() {
     clear();
+    frameRate(30);
     //background(125);
-    noStroke();
-    fill('red');
-    rect(0, height - 400, 400, 400);
-
-    frog.show();
+    let tonx = 68;
+    let tony = height - 55;
 
     let mouse = new p5.Vector(mouseX, mouseY);
-    flies.forEach((f) => {
+    flies.forEach((f, i) => {
         f.step();
         f.show();      
         f.seekmouse(mouse); 
@@ -39,48 +39,28 @@ function draw() {
         f.cohesion(flies);
 
         if(f.pos.x < 350 && f.pos.y > height - 350) {
-            frog.lash(f);
-            f.isDead = true;
+            frameRate(5);
+            //frog.lash(f);
+            tonx = f.pos.x;
+            tony = f.pos.y;
+            flies.splice(i, 1);
         }
+
     });
 
+    image(frog, 20, height - 70, 70, 70);
+
+    stroke(255, 204, 195);
+    strokeWeight(3);
+    line(68, height - 55, tonx, tony);
+
+    console.log(tonx, tony);
+
 }
-
-class Frog {
-    constructor() {
-        this.pos = createVector(70, height-70);
-        this.tongue = createVector(70, height-70);
-    }
-
-    show() {
-        fill(255);
-        circle(this.pos.x, this.pos.y, 20);
-        circle(this.tongue.x, this.tongue.y, 5);
-    }
-
-    lash(fly) {
-        // let dx = (fly.pos.x - this.tongue.x) * 0.01;
-        // let dy = (fly.pos.y - this.tongue.y) * 0.01;
-
-        // this.tongue.x += dx;
-        // this.tongue.y += dy;
-
-        // if (this.tongue.x == fly.pos.x && this.tongue.y == fly.pos.y) {
-        //     this.tongue = createVector(70, height-70);
-        // } 
-
-        stroke(0);
-        strokeWeight(2);
-        line(this.pos.x, this.pos.y, fly.pos.x, fly.pos.y);
-    }
-    
-}
-
-
 
 class Fly {
     constructor() {
-        this.pos = createVector(random(width), random(height));
+        this.pos = createVector(random(width), random(height/2));
         this.vel = createVector(random(-1, 1), random(-1, 1));
         this.acc = createVector(0, 0);
         this.mousefield = 200;
@@ -97,34 +77,30 @@ class Fly {
     }
 
     step() {
-        if(!this.isDead) {
-            this.vel.add(this.acc);
-            this.vel.limit(this.maxspeed);
-            this.pos.add(this.vel);
-            this.acc.mult(0);     
+        this.vel.add(this.acc);
+        this.vel.limit(this.maxspeed);
+        this.pos.add(this.vel);
+        this.acc.mult(0);     
 
-            if (this.pos.x > width + 100) {
-                this.pos.x = -100;
-            } else if (this.pos.x < -100) {
-                this.pos.x = width + 100;
-            }
-            if (this.pos.y > height + 100) {
-                this.pos.y = -100;
-            } else if (this.pos.y < -100) {
-                this.pos.y = height + 100;
-            }
+        if (this.pos.x > width + 100) {
+            this.pos.x = -100;
+        } else if (this.pos.x < -100) {
+            this.pos.x = width + 100;
+        }
+        if (this.pos.y > height + 100) {
+            this.pos.y = -100;
+        } else if (this.pos.y < -100) {
+            this.pos.y = height + 100;
         }
     }
 
     show() {
-        if(!this.isDead) {
-            // fill(0);
-            // circle(this.pos.x, this.pos.y, 10);
-            if(this.perc < 0.5) {
-                image(flyimg1, this.pos.x, this.pos.y, 20, 20);
-            } else {
-                image(flyimg2, this.pos.x, this.pos.y, 20, 20);
-            }
+        // fill(0);
+        // circle(this.pos.x, this.pos.y, 10);
+        if(this.perc < 0.5) {
+            image(flyimg1, this.pos.x, this.pos.y, 20, 20);
+        } else {
+            image(flyimg2, this.pos.x, this.pos.y, 20, 20);
         }
     }
 
