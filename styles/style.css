@@ -476,3 +476,16 @@ footer {
   background-color: var(--grey);
   margin: calc(0.5 * var(--innerHeightMargin)) 0;
 }
+
+.fly {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
