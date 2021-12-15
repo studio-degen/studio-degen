@@ -43,7 +43,7 @@ function setup() {
     for (let i = 0; i < 20; i++) {
         flies.push(new Fly());       
     }
-    console.log(flies);
+    // console.log(flies);
 }
 
 function draw() {
@@ -78,7 +78,7 @@ function draw() {
     strokeWeight(3);
     line(68, height - 55, tonx, tony);
 
-    console.log(tonx, tony);
+    // console.log(tonx, tony);
 
 }
 
