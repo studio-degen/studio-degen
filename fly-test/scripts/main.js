@@ -38,7 +38,7 @@ function draw() {
         f.alignment(flies);
         f.cohesion(flies);
 
-        if(f.pos.x < 350 && f.pos.y > height - 350) {
+        if(f.pos.x < 350 && f.pos.x > 10 && f.pos.y > height - 350 && f.pos.y < height - 10) {
             frameRate(5);
             //frog.lash(f);
             tonx = f.pos.x;
@@ -98,9 +98,9 @@ class Fly {
         // fill(0);
         // circle(this.pos.x, this.pos.y, 10);
         if(this.perc < 0.5) {
-            image(flyimg1, this.pos.x, this.pos.y, 20, 20);
+            image(flyimg1, this.pos.x - 10, this.pos.y - 10, 20, 20);
         } else {
-            image(flyimg2, this.pos.x, this.pos.y, 20, 20);
+            image(flyimg2, this.pos.x - 10, this.pos.y - 10, 20, 20);
         }
     }
 
