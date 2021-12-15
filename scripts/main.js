@@ -24,15 +24,16 @@ let flyimg1, flyimg2;
 let frog;
 
 function preload() {
-    flyimg1 = loadImage('../assets/flies/fly1.png');
-    flyimg2 = loadImage('../assets/flies/fly2.png');
-    frog = loadImage('../assets/flies/frog.png');
+    flyimg1 = loadImage('../studio-degen/assets/flies/fly1.png');
+    flyimg2 = loadImage('../studio-degen/assets/flies/fly2.png');
+    frog = loadImage('../studio-degen/assets/flies/frog.png');
 }
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     p5_canvas = document.querySelector('canvas');
     p5_canvas.classList.add("fly");
+    p5_canvas.setAttribute("style", "");
 
     noStroke();
     frameRate(30);
