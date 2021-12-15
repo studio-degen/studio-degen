@@ -25,8 +25,8 @@ let frog;
 
 function preload() {
     flyimg1 = loadImage('../assets/expcam1.png');
-    flyimg2 = loadImage('../assets/flies/expcam1.png');
-    frog = loadImage('../assets/flies/expcam1.png');
+    flyimg2 = loadImage('../assets/expcam1.png');
+    frog = loadImage('../assets/expcam1.png');
 }
 
 function setup() {
