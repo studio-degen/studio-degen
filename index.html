@@ -39,19 +39,19 @@
 
     <!-- side jump tos -->
     <ul id="jumpTo">
-        <li>
+        <li id="c1">
             <div class="circle"></div>
             <a href="#feat1">Q-Sweeper</a> 
         </li>
-        <li>
+        <li id="c2">
             <div class="circle"></div>
             <a href="#feat2">Creative Code</a>
         </li>
-        <li>
+        <li id="c3">
             <div class="circle"></div>
             <a href="#about">About</a>
         </li>
-        <li>
+        <li id="c4">
             <div class="circle"></div>
             <a href="#contact">Contact</a>
         </li>
@@ -71,13 +71,13 @@
         </article>
         <article id="feat2">
             <div class="featText">
-                <h3><a href="./projects.html">Creative Code</a></h3>
+                <h3><a href="./projects.html#creativeCode">Creative Code</a></h3>
                 <h4>
                     Creative Code is a series of projects that use code as a medium for creative expression
                 </h4>
-                <h3><a class="rArrow" href="./projects.html">&rarr;</a></h3>
+                <h3><a class="rArrow" href="./projects.html#creativeCode">&rarr;</a></h3>
             </div>
-            <a href="./projects.html">
+            <a href="./projects.html#creativeCode">
                 <div class="featuredImage" id="feat2Img"></div>
             </a>
         </article>
@@ -95,28 +95,36 @@
         </article>
         <article class="flex">
             <div class="profile">
+                <a href="https://apurvrayate.myportfolio.com/work" target="_blank" rel="noopener noreferrer">
                 <figure>
                     <img src="assets/about_img/Apurv.png" alt="Apurv Rayate's Profile Picture">
                 </figure>
                 <p>Apurv Rayate</p>
+                </a>
             </div>
             <div class="profile">
+                <a href="https://pandahya.github.io/portfolio/index.html" target="_blank" rel="noopener noreferrer">
                 <figure>
                     <img src="assets/about_img/Hya.png" alt="Hyacinth Weng's Profile Picture">
                 </figure>
                 <p>Hyacinth Weng</p>
+                </a>
             </div>
             <div class="profile">
+                <a href="https://tanvi.glitch.me/index.html" target="_blank" rel="noopener noreferrer">
                 <figure>
                     <img src="assets/about_img/Tanvi.png" alt="Tanvi Mishra's Profile Picture">
                 </figure>
                 <p>Tanvi Mishra</p>
+                </a>
             </div>
             <div class="profile">
+                <a href="https://wuyuyipi.github.io/portfolio/index.html" target="_blank" rel="noopener noreferrer">
                 <figure>
                     <img src="assets/about_img/Yiping.png" alt="Yiping Dong's Profile Picture">
                 </figure>
                 <p>Yiping Dong</p>
+                </a>
             </div>
         </article>
     </section>
@@ -155,5 +163,39 @@
 </body>
 
 <script src="./scripts/main.js"></script>
+<script>
+    const c1 = document.querySelector("#c1")
+    const a1 = c1.lastElementChild;
+    const c2 = document.querySelector("#c2")
+    const a2 = c2.lastElementChild;
+    const c3 = document.querySelector("#c3")
+    const a3 = c3.lastElementChild;
+    const c4 = document.querySelector("#c4")
+    const a4 = c4.lastElementChild;
 
+    c1.addEventListener("mouseenter", function(){
+        a1.style.opacity = "100%";
+    });
+    c1.addEventListener("mouseleave", function(){
+        a1.style.opacity = "0%";
+    });
+    c2.addEventListener("mouseenter", function(){
+        a2.style.opacity = "100%";
+    });
+    c2.addEventListener("mouseleave", function(){
+        a2.style.opacity = "0%";
+    });
+    c3.addEventListener("mouseenter", function(){
+        a3.style.opacity = "100%";
+    });
+    c3.addEventListener("mouseleave", function(){
+        a3.style.opacity = "0%";
+    });
+    c4.addEventListener("mouseenter", function(){
+        a4.style.opacity = "100%";
+    });
+    c4.addEventListener("mouseleave", function(){
+        a4.style.opacity = "0%";
+    });
+</script>
 </html> 

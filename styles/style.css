@@ -340,7 +340,7 @@ footer {
 #jumpTo li {
   color: var(--foreground);
   display: flex;
-  list-style-type: none;
+  list-style-type: circle;
   margin: 10px 0;
 }
 #jumpTo a {
