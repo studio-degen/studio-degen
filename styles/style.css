@@ -323,12 +323,27 @@ footer {
   margin: auto 0;
 }
 .socials {
-  background-color: var(--grey);
+  /* background-color: grey; */
   width: 40px;
   height: 40px;
   margin-left: 1vw;
   border-radius: 50%;
+  overflow: hidden;
 }
+
+.social_icon{
+  display: block;
+  margin:auto;
+  margin-top:15%;
+  width:70%;
+  height:70%;
+}
+
+/* .social_icon {
+  width:40px;
+  height: 40px;
+
+} */
 
 #jumpTo {
   position: fixed;
