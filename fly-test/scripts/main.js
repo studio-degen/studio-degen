@@ -1,3 +1,4 @@
+let p5_canvas;
 let flies = [];
 let flyimg1, flyimg2;
 let frog;
@@ -9,7 +10,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
+    p5_canvas = createCanvas(window.innerWidth, window.innerHeight);
+    $(p5_canvas.canvas).addClass("fly");
 
     noStroke();
     frameRate(30);
@@ -38,7 +40,7 @@ function draw() {
         f.alignment(flies);
         f.cohesion(flies);
 
-        if(f.pos.x < 350 && f.pos.x > 10 && f.pos.y > height - 350 && f.pos.y < height - 10) {
+        if(f.pos.x < 250 && f.pos.x > 20 && f.pos.y > height - 250 && f.pos.y < height - 20) {
             frameRate(5);
             //frog.lash(f);
             tonx = f.pos.x;
