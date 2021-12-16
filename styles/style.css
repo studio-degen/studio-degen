@@ -37,21 +37,36 @@ body {
   mix-blend-mode: difference;
   z-index: 5;
 }
-#title a,
-#title a:visited,
-nav a,
-nav a:visited {
+#title a, #title a:visited, nav a, nav a:visited {
   color: var(--foreground);
   font-style: normal;
 }
 #title a:hover {
   font-weight: 600;
 }
+nav {
+  position: fixed;
+  height: 0px;
+  overflow: hidden;
+  top: 100px;
+  right: 50px;
+  text-align: right;
+  line-height: 45px;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+  mix-blend-mode: difference;
+  z-index: 4;
+}
+nav ul li {
+  font-weight: 500;
+  font-size: 1.5em;
+  list-style-type: none;
+}
 nav a:hover {
   font-style: italic;
 }
 #logo {
-  z-index: 5;
+  z-index: 3;
   position: fixed;
   top: 0;
   right: 0;
@@ -66,23 +81,7 @@ nav a:hover {
   width: 85px;
   z-index: inherit;
 }
-nav {
-  position: fixed;
-  height: 0px;
-  overflow: hidden;
-  top: 100px;
-  right: 50px;
-  text-align: right;
-  line-height: 45px;
-  font-weight: 500;
-  transition: 0.5s ease-in-out;
-  mix-blend-mode: difference;
-}
-nav ul li {
-  font-weight: 500;
-  font-size: 1.5em;
-  list-style-type: none;
-}
+
 
 h1,
 h2,
