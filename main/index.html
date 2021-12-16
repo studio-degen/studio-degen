@@ -128,22 +128,35 @@
     <hr>
 
     <!--contact-->
-    <section id="contact">
+    <!-- <section id="contact">
         <h3>Contact</h3>
         <p id="centerText">email@email.com &rarr;</p>
-        <div class="contactBox">
+        <div class="formInput">
             <p class="contactText">first</p>
         </div>
-        <div class="contactBox">
+        <div class="formInput">
             <p class="contactText">last</p>
         </div>
-        <div class="contactBox">
+        <div class="formInput">
             <p class="contactText">email</p>
         </div>
-        <div class="contactBox" style="height:20vh">
+        <div class="formInput" style="height:20vh">
             <p class="contactText">message</p>
         </div>
         <button>Submit</button>
+    </section> -->
+    
+    <!--contact-->
+    <section id="contact">
+        <h3>Contact</h3>
+        <article id="contactForm">
+            <form action="form.php" method="POST">
+                <input type="text" placeholder="Name" name="name" id="formName" class="formInput"><br/>
+                <input type="text" placeholder="Email" name="email" id="formEmail" class="formInput"><br/>
+                <input type="text" placeholder="Message" name="message" id="formMessage" class="formInput"></input><br/>
+                <input type="submit" class="formButton" value="Send">
+            </form>
+        </article>
     </section>
 </main>
 

@@ -29,21 +29,24 @@ body {
   margin: 10px 0 150px 0;
 }
 
-#title{
+#title {
   position: fixed;
   top: 0;
   left: 0;
   margin: 20px;
   mix-blend-mode: difference;
 }
-#title a,  #title a:visited, nav a, nav a:visited {
+#title a,
+#title a:visited,
+nav a,
+nav a:visited {
   color: var(--foreground);
   font-style: normal;
 }
-#title a:hover{
+#title a:hover {
   font-weight: 600;
 }
-nav a:hover{
+nav a:hover {
   font-style: italic;
 }
 #logo {
@@ -78,7 +81,11 @@ nav ul li {
   list-style-type: none;
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   color: var(--foreground);
   margin: 10px 0;
 }
@@ -170,7 +177,6 @@ main a:hover {
   text-align: center;
 }
 
-
 #homepage {
   display: flex;
   flex-direction: column;
@@ -206,7 +212,7 @@ main a:hover {
   float: right;
   /* background-color: var(--grey); */
   background-position: center;
-  background-size:contain;
+  background-size: contain;
 }
 #feat1Img {
   background-image: url("../assets/q3.png");
@@ -276,8 +282,6 @@ main a:hover {
   }
 }
 
-
-
 #about {
   max-width: 900px;
   margin: 100px auto;
@@ -286,7 +290,7 @@ main a:hover {
   text-align: center;
   margin-bottom: 50px;
 }
-#profiles{
+#profiles {
   display: grid;
   grid: 1fr / 1fr 1fr 1fr 1fr;
   gap: 2%;
@@ -305,12 +309,33 @@ main a:hover {
 #contact h3 {
   text-align: center;
 }
-.contactBox {
+.formInput {
+  font-family: "Work Sans", sans-serif;
+  font-size: 24px;
   border-color: var(--foreground);
   border-style: solid;
   border-width: 1px;
   margin: 4vh auto 0 auto;
-  padding: 0 1vw;
+  padding: 3vh 1vw;
+  width: 100%;
+  background-color: transparent;
+  color: var(--foreground);
+  opacity: 100%;
+}
+.formButton {
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--grey);
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 25px;
+  margin: 10px 5px;
+}
+#formMessage {
+  padding: 6vh 1vw;
 }
 #centerText {
   text-align: center;
@@ -335,12 +360,12 @@ footer {
   overflow: hidden;
 }
 
-.social_icon{
+.social_icon {
   display: block;
-  margin:auto;
-  margin-top:15%;
-  width:70%;
-  height:70%;
+  margin: auto;
+  margin-top: 15%;
+  width: 70%;
+  height: 70%;
 }
 
 /* .social_icon {
@@ -383,7 +408,7 @@ footer {
   justify-content: space-between;
   padding: 0 20px;
 }
-footer p{
+footer p {
   margin-left: 80px;
 }
 #footerIcons {
@@ -396,7 +421,6 @@ footer p{
   margin-left: 1vw;
   /* border-radius: 50%; */
 }
-
 
 /* PAGE 2: Projects */
 .projects {
@@ -425,7 +449,7 @@ footer p{
   max-width: var(--innerHeightMargin) var(--outerMargin);
   /* text-align: center; */
 }
-#abtPg span{
+#abtPg span {
   text-decoration: 20px var(--accentCol1) underline;
   text-decoration-skip-ink: none;
   text-underline-position: below;
@@ -445,7 +469,7 @@ footer p{
 #devlog {
   display: grid;
   grid: 1fr / 0.7fr 0.3fr;
-  gap: 5%
+  gap: 5%;
 }
 #tags {
   align-self: flex-start;
@@ -522,87 +546,86 @@ footer p{
   pointer-events: none;
 }
 
-@media only screen and (max-width: 1100px){
-  #tags{
+@media only screen and (max-width: 1100px) {
+  #tags {
     top: 130px;
   }
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) {
   /* body{
     background-color: blue;
   } */
-  #jumpTo{
+  #jumpTo {
     visibility: hidden;
   }
-  #featured{
+  #featured {
     margin-left: 0;
   }
-  #featured article{
+  #featured article {
     margin-left: 20px;
   }
-  .featText{
+  .featText {
     width: 40vw;
   }
-  .projects{
+  .projects {
     grid: 1fr / 1fr 1fr;
   }
-  #about, #contact{
+  #about,
+  #contact {
     margin: 100px 20px 20px 20px;
   }
-  
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   /* body{
     background-color: cornflowerblue;
   } */
-  #featured article{
+  #featured article {
     grid: 1fr 1fr/ 1fr;
     gap: 0;
     margin: 0 0 50px 0;
     padding: 20px;
   }
-  .featText{
+  .featText {
     width: 100%;
   }
-  .featText h3{
+  .featText h3 {
     margin: 0;
   }
-  .featuredImage{
+  .featuredImage {
     width: 100%;
     height: 100%;
   }
-  #profiles{
+  #profiles {
     grid: 1fr 1fr / 1fr 1fr;
   }
-  #footerIcons{
+  #footerIcons {
     margin: auto 0;
   }
-  .projects{
+  .projects {
     grid: 1fr / 1fr;
   }
-  #devlog{
+  #devlog {
     grid: 1fr / 1fr;
     gap: 2%;
   }
-  #posts{
+  #posts {
     width: 100%;
   }
-  #tags{
+  #tags {
     grid-row: 1 / 2;
     position: relative;
     top: 0;
   }
-  #tags h4{
+  #tags h4 {
     text-align: left;
   }
-  #tags button{
+  #tags button {
     float: left;
   }
-  .person{
+  .person {
     grid: 1fr / 1fr;
   }
-
 }
 /* @media only screen and (max-width: 400px){
   body{
