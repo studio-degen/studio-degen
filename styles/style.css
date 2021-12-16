@@ -384,17 +384,17 @@ footer {
   padding: 0 20px;
 }
 footer p{
-  margin-left: 6vw;
+  margin-left: 80px;
 }
 #footerIcons {
   margin: auto 6vw auto 0;
 }
 .socials {
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
   width: 40px;
   height: 40px;
   margin-left: 1vw;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 
@@ -528,9 +528,9 @@ footer p{
   }
 }
 @media only screen and (max-width: 1000px){
-  body{
+  /* body{
     background-color: blue;
-  }
+  } */
   #jumpTo{
     visibility: hidden;
   }
@@ -553,9 +553,9 @@ footer p{
 }
 
 @media only screen and (max-width: 600px){
-  body{
+  /* body{
     background-color: cornflowerblue;
-  }
+  } */
   #featured article{
     grid: 1fr 1fr/ 1fr;
     gap: 0;
@@ -604,8 +604,8 @@ footer p{
   }
 
 }
-@media only screen and (max-width: 400px){
+/* @media only screen and (max-width: 400px){
   body{
     background-color: darkgoldenrod;
   }
-}
+} */
