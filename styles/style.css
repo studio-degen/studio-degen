@@ -316,6 +316,38 @@ main a:hover {
   text-align: center;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 var(--outerMargin); */
+  padding: 0 20px;
+  /* border: 1px solid var(--foreground); */
+}
+#footerIcons {
+  margin: auto 0;
+}
+.socials {
+  /* background-color: grey; */
+  width: 40px;
+  height: 40px;
+  margin-left: 1vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.social_icon{
+  display: block;
+  margin:auto;
+  margin-top:15%;
+  width:70%;
+  height:70%;
+}
+
+/* .social_icon {
+  width:40px;
+  height: 40px;
+
+} */
 
 #jumpTo {
   position: fixed;
