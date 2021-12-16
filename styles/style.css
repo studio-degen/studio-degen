@@ -35,33 +35,14 @@ body {
   left: 0;
   margin: 20px;
   mix-blend-mode: difference;
+  z-index: 5;
 }
-#title a,
-#title a:visited,
-nav a,
-nav a:visited {
+#title a, #title a:visited, nav a, nav a:visited {
   color: var(--foreground);
   font-style: normal;
 }
 #title a:hover {
   font-weight: 600;
-}
-nav a:hover {
-  font-style: italic;
-}
-#logo {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 20px;
-  width: 85px;
-  height: 100px;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
-  mix-blend-mode: difference;
-}
-#logo_img {
-  width: 85px;
 }
 nav {
   position: fixed;
@@ -74,12 +55,33 @@ nav {
   font-weight: 500;
   transition: 0.5s ease-in-out;
   mix-blend-mode: difference;
+  z-index: 4;
 }
 nav ul li {
   font-weight: 500;
   font-size: 1.5em;
   list-style-type: none;
 }
+nav a:hover {
+  font-style: italic;
+}
+#logo {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  width: 85px;
+  height: 100px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+#logo_img {
+  width: 85px;
+  z-index: inherit;
+}
+
 
 h1,
 h2,
@@ -436,26 +438,65 @@ footer p {
 }
 
 /* PAGE 2: Projects */
-.projects {
+#projpg{
+  position: relative;
+  top: 70px;
+  padding: 50px;
+}
+#projects{
   display: grid;
-  grid: 1fr / 1fr 1fr 1fr;
-  gap: 2vh 2vw;
+  grid: 1fr / 1fr 1fr;
+  gap: 2%;
+  height: 70vh;
+  width:100%;
+  touch-action: none;
+  margin-top: -100px;
+  /* overflow: hidden; */
 }
-.project {
-  width: 100%;
+#projects article{
   height: 100%;
-  margin: 0;
-  text-align: center;
 }
-/* .project:hover .projectName {
-  opacity: 100%;
-} */
-.project img {
-  width: 100%;
+#projects article h3{
+  position: relative;
+  top: 10px;
+  background-color: var(--accentCol1);
+  padding: 0 5px;
 }
-/* .project figcaption {
-  opacity: 0%;
-} */
+.projPrev{
+  width:200px;
+  height:200px;
+  touch-action: none;
+  user-select: none;
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+}
+#qsweeper{
+  background-image: url(../assets/entminelg.png);
+}
+#frac{
+  background-image: url(../assets/creative_coding_img/frac1.jpg);
+}
+#expcam{
+  background-image: url(../assets/creative_coding_img/expcam.png);
+}
+#inttype{
+  background-image: url(../assets/creative_coding_img/tanvi-interactive_type.png);
+}
+#bagua{
+  background-image: url(../assets/creative_coding_img/yiping-digital_divination.png);
+}
+.item{
+  width: min-content;
+  display: inline-block;
+}
+.item:hover, .projPrev:hover{
+  cursor: grab;
+}
+.item:active, .projPrev:active{
+  cursor: grabbing;
+}
 
 /* PAGE 3: About */
 #abtPg {
@@ -580,13 +621,13 @@ footer p {
   .featText {
     width: 40vw;
   }
-  .projects {
-    grid: 1fr / 1fr 1fr;
-  }
-  #about,
-  #contact {
+  #about, #contact{
     margin: 100px 20px 20px 20px;
   }
+  .projects{
+    grid: 1fr 1fr / 1fr;
+  }
+  
 }
 
 @media only screen and (max-width: 600px) {
@@ -615,10 +656,7 @@ footer p {
   #footerIcons {
     margin: auto 0;
   }
-  .projects {
-    grid: 1fr / 1fr;
-  }
-  #devlog {
+  #devlog{
     grid: 1fr / 1fr;
     gap: 2%;
   }

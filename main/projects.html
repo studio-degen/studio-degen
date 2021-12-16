@@ -25,21 +25,38 @@
 </nav>
 
 <!--main body, changes across pages-->
-<main class="width">
+<main id="projpg">
     <h2>Projects</h2>
-    <section id="quantumArcade">
-        <h3>Quantum Arcade</h3>
-        <p>Classic games with an added element of quanutm.</p>
-        <article class="projects">
-            <a href="../projects/q-sweeper.html">
-                <figure class=project>
-                    <img src="../assets/entminelg.png">
-                    <figcaption class="projectName">Q-Sweeper</figcaption>
-                </figure>
-            </a>
+    <section id="projects">
+        <article id="quantumArcade">
+            <h3 class="item" id="qatitle">Quantum Arcade</h3>
+            <!-- <p class="item">Classic games with an added element of quantum.</p> -->
+                <div id="qsweeper" class="projPrev"></div>
+        </article>
+        <article id="creativeCode">
+            <h3 class="item" id="cctitle">Creative Code</h3>
+            <div id="frac" class="projPrev"></div>
+            <div id="expcam" class="projPrev">
+                <a href="../projects/experimental-camera.html"></a>
+            </div>
+            <div id="inttype" class="projPrev"></div>
+            <div id="bagua" class="projPrev"></div>
         </article>
     </section>
-    <section id="creativeCode">
+
+
+    <!-- <section id="quantumArcade"> -->
+        <!-- <article class="projects"> -->
+            <!-- <a draggable="false" src="../projects/q-sweeper.html" id="qsweeper"> -->
+                <!-- <figure draggable="false" class=project id="qsweeper"> -->
+                    <!-- <div id="qsweeper">
+                    <img draggable="false" src="../assets/entminelg.png"></div> -->
+                    <!-- <figcaption class="projectName">Q-Sweeper</figcaption> -->
+                <!-- </figure> -->
+            <!-- </a> -->
+        <!-- </article> -->
+    <!-- </section> -->
+    <!-- <section id="creativeCode">
         <h3>Creative Code</h3>
         <p>
             Projects made using the p5.js library that showcase the use of code as a medium for creative expression.
@@ -70,7 +87,7 @@
                 </figure>
             </a>
         </article>
-    </section>
+    </section> -->
 </main>
 
 <!--footer with socials, reused across pages-->
@@ -90,4 +107,130 @@
 </footer>   
 </body>
 <script src="../scripts/main.js"></script>
+<script>
+    // https://www.kirupa.com/html5/examples/drag_multiple.htm
+    const quantumArcade = document.querySelector("#quantumArcade");
+    const creativeCode = document.querySelector("#creativeCode");
+    const qatitle = document.getElementById("qatitle");
+    const cctitle = document.getElementById("cctitle");
+    const qsweeper = document.getElementById("qsweeper");
+    const frac = document.getElementById("frac");
+    const expcam = document.getElementById("expcam");
+    const inttype = document.getElementById("inttype");
+    const bagua = document.getElementById("bagua");
+
+    let qa = [qatitle, qsweeper];
+    let cc = [cctitle, frac, expcam, inttype, bagua];
+    let activeItem = null;
+    let active = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    for(let i = 0; i<qa.length; i++){
+        let hRand = quantumArcade.clientHeight - qsweeper.clientHeight;
+        let wRand = quantumArcade.clientWidth - qatitle.clientWidth;
+        qa[i].style.top = Math.random()*hRand/2+"px";
+        qa[i].style.left = Math.random()*hRand/2+"px";
+    };
+    for(let i = 0; i<cc.length; i++){
+        let hRand = creativeCode.clientHeight - frac.clientHeight;
+        let wRand = creativeCode.clientWidth - cctitle.clientWidth;
+        cc[i].style.top = Math.random()*hRand/2+"px";
+        cc[i].style.left = Math.random()*hRand/2+"px";
+    };
+
+    quantumArcade.addEventListener("touchstart", dragStart, false);
+    quantumArcade.addEventListener("touchend", dragEnd, false);
+    quantumArcade.addEventListener("touchmove", drag, false);
+
+    quantumArcade.addEventListener("mousedown", dragStart, false);
+    quantumArcade.addEventListener("mouseup", dragEnd, false);
+    quantumArcade.addEventListener("mousemove", drag, false);
+
+    creativeCode.addEventListener("touchstart", dragStart, false);
+    creativeCode.addEventListener("touchend", dragEnd, false);
+    creativeCode.addEventListener("touchmove", drag, false);
+
+    creativeCode.addEventListener("mousedown", dragStart, false);
+    creativeCode.addEventListener("mouseup", dragEnd, false);
+    creativeCode.addEventListener("mousemove", drag, false);
+
+    function dragStart(e) {
+      if (e.target !== e.currentTarget) {
+        active = true;
+        activeItem = e.target;
+
+        if (activeItem !== null) {
+          if (!activeItem.xOffset) {
+            activeItem.xOffset = 0;
+          };
+
+          if (!activeItem.yOffset) {
+            activeItem.yOffset = 0;
+          };
+
+          if (e.type === "touchstart") {
+            activeItem.initialX = e.touches[0].clientX - activeItem.xOffset;
+            activeItem.initialY = e.touches[0].clientY - activeItem.yOffset;
+          } else {
+            console.log("doing something!");
+            activeItem.initialX = e.clientX - activeItem.xOffset;
+            activeItem.initialY = e.clientY - activeItem.yOffset;
+          };
+        };
+      };
+    };
+
+    function dragEnd(e) {
+      if (activeItem !== null) {
+        activeItem.initialX = activeItem.currentX;
+        activeItem.initialY = activeItem.currentY;
+      };
+      active = false;
+      activeItem = null;
+    };
+
+    function drag(e) {
+      if (active) {
+        if (e.type === "touchmove") {
+          e.preventDefault();
+
+          activeItem.currentX = e.touches[0].clientX - activeItem.initialX;
+          activeItem.currentY = e.touches[0].clientY - activeItem.initialY;
+        } else {
+          activeItem.currentX = e.clientX - activeItem.initialX;
+          activeItem.currentY = e.clientY - activeItem.initialY;
+        };
+
+        activeItem.xOffset = activeItem.currentX;
+        activeItem.yOffset = activeItem.currentY;
+
+        setTranslate(activeItem.currentX, activeItem.currentY, activeItem);
+      };
+    };
+
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    };
+
+    qsweeper.ondblclick = function(){
+        window.location.href ="../projects/q-sweeper.html"
+    };
+    frac.ondblclick = function(){
+        window.location.href ="../projects/fracjs.html"
+    };
+    expcam.ondblclick = function(){
+        window.location.href ="../projects/experimental-camera.html"
+    };
+    inttype.ondblclick = function(){
+        window.location.href ="../projects/interactive-type.html"
+    };
+    bagua.ondblclick = function(){
+        window.location.href ="../projects/divine-with-bagua.html"
+    };
+</script>
 </html> 
