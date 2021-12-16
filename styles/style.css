@@ -302,6 +302,19 @@ main a:hover {
   width: 100%;
 }
 
+.aboutRotate:hover {
+  display: block;
+  transition: 1s ease-in-out;
+  animation: rotateImg 2s infinite;
+}
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 #contact {
   max-width: 900px;
   margin: 150px auto;
