@@ -187,7 +187,7 @@ main a:hover {
   align-items: center;
   justify-content: center;
   padding: 0 20vw;
-  background-color: var(--grey);
+  background-color: var(--background);
   z-index: 5;
 }
 #scribble {
@@ -406,9 +406,9 @@ footer {
   margin: 10px 0;
 }
 
-.JumpToText{
-  display:block;
-  margin:0 0 0 10px;
+.JumpToText {
+  display: block;
+  margin: 0 0 0 10px;
   opacity: 0%;
 }
 .JumpToText a {
