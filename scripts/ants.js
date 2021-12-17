@@ -7,7 +7,7 @@ function sketch_ant(p) {
     p.setup = function () {
         antcanvas = p.createCanvas(window.innerWidth, window.innerHeight);
         // antcanvas.parent('scribble');
-        p.background(204, 204, 203);
+        p.background(0);
         
         x = p.width/2;
         y = p.height/2;
@@ -19,9 +19,10 @@ function sketch_ant(p) {
 
 
         p.noStroke();
-        p.fill(0);
+        
         if (p.frameCount % 60 == 0){
             if(p.random(1) < 0.7){
+                p.fill(86, 79, 161);
                 p.rect(x, y, 10, 10); 
                 eggs.push({pos: {x, y}});
             }
@@ -104,7 +105,7 @@ function sketch_ant(p) {
         }
         
         show(){
-            p.fill(86, 79, 161);
+            p.fill(147, 138, 194);
             p.rect(this.pos.x + 4, this.pos.y + 4, 2, 2);
         }
         
