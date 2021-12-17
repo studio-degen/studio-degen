@@ -409,13 +409,13 @@ footer {
 .JumpToText{
   display:block;
   margin:0 0 0 10px;
+  opacity: 0%;
 }
 .JumpToText a {
   height: 100%;
   text-decoration: none;
-  opacity: 0%;
 }
-.JumpToText a:hover {
+.JumpToText :hover {
   opacity: 100%;
 }
 .circle {
