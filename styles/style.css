@@ -191,8 +191,10 @@ main a:hover {
   z-index: 5;
 }
 #scribble {
-  width: 40vw;
-  height: 40vw;
+  top: 0;
+  left: 0;
+  /* width: 40vw;
+  height: 40vw; */
   border-radius: 50%;
   /* background-color: var(--foreground); */
 }
@@ -271,6 +273,7 @@ main a:hover {
 }
 .dArrow {
   display: block;
+  height: 180px;
   transition: 1s ease-in;
   animation: arrowBounceD 2s infinite;
 }
