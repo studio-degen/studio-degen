@@ -22,7 +22,7 @@ function sketch_ant(p) {
 
         p.noStroke();
         
-        if (p.frameCount < 25000) {
+        if (p.frameCount < 15000) {
             if (p.frameCount % 240 == 0){
                 if(p.random(1) < 0.7){
                     pg.noStroke();
@@ -37,7 +37,7 @@ function sketch_ant(p) {
             }
         }
 
-        if (p.frameCount < 20000) {
+        if (p.frameCount < 12000) {
             if (p.frameCount % 360 == 0){
                 if(p.random(1) < 0.5 && eggs.length > 3){
                     ants.push(new Ant(eggs));
@@ -80,16 +80,16 @@ function sketch_ant(p) {
             y = y - 10;
         }
         
-        if(x < 50) {
-            x = p.width - 50;
-        } else if(x > p.width - 50) {
-            x = 50;
+        if(x < 20) {
+            x = p.width - 20;
+        } else if(x > p.width - 20) {
+            x = 20;
         }
         
-        if(y < 50) {
-            y = p.height - 50;
-        } else if(y > p.height - 50) {
-            y = 50;
+        if(y < 20) {
+            y = p.height - 20;
+        } else if(y > p.height - 20) {
+            y = 20;
         }
         // x = constrain(x, 0, width - 10);
         // y = constrain(y, 0, height - 10);
