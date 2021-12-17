@@ -12,7 +12,7 @@ function sketch_fly(p) {
 
     p.setup = function () {
         p.createCanvas(window.innerWidth, window.innerHeight);
-        p5_canvas = document.querySelector('#defaultCanvas1');
+        p5_canvas = document.querySelector('#defaultCanvas0');
         p5_canvas.classList.add("fly");
         p5_canvas.setAttribute("style", "");
 
