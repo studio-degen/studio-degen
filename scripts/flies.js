@@ -5,9 +5,9 @@ function sketch_fly(p) {
     let frog;
 
     p.preload = function () {
-        flyimg1 = p.loadImage('../studio-degen/assets/flies/fly1.png');
-        flyimg2 = p.loadImage('../studio-degen/assets/flies/fly2.png');
-        frog = p.loadImage('../studio-degen/assets/flies/frog.png');
+        flyimg1 = p.loadImage('../assets/flies/fly1.png');
+        flyimg2 = p.loadImage('../assets/flies/fly2.png');
+        frog = p.loadImage('../assets/flies/frog.png');
     }
 
     p.setup = function () {
