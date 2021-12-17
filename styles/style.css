@@ -396,19 +396,23 @@ footer {
   width: max-content;
   margin: 5vh 1vw;
 }
+
 #jumpTo li {
   color: var(--foreground);
   display: flex;
   margin: 10px 0;
 }
-#jumpTo a {
-  margin: 0 0 0 10px;
-  display: block;
+
+.JumpToText{
+  display:block;
+  margin:0 0 0 10px;
+}
+.JumpToText a {
   height: 100%;
   text-decoration: none;
   opacity: 0%;
 }
-#jumpTo a:hover {
+.JumpToText a:hover {
   opacity: 100%;
 }
 .circle {
