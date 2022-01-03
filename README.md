@@ -8,4 +8,4 @@ website:
 
 quantum arcade:
 - q-sweeper https://pandahya.github.io/q-sweeper/
-- qac-man https://pandahya.github.io/qac-man/
+- qac-man https://github.com/pandahya/qac-man
