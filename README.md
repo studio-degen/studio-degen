@@ -8,4 +8,5 @@ website:
 
 quantum arcade:
 - q-sweeper https://studio-degen.github.io/q-sweeper/
+- battleship https://studio-degen.github.io/q-battleship/
 - qac-man https://github.com/studio-degen/qac-man
