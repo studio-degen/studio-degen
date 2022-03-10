@@ -34,99 +34,87 @@
 <!--main body, changes across pages-->
 <main class="width">
     <section id="mainInfo">
-        <h3>Q-Sweeper</h3> 
-        <p id="date">2021</p>
+        <h3>battleship</h3> 
+        <p id="date">2022</p>
         <p id="brief">
-            Q-sweeper stands for quantum minesweeper. The original game is redesigned by applying quantum concepts–noise and entanglement–to it. The minesweeper maps and mine placement is generated using data from a quantum algorithm.
+            Battleship is a quantum version of the traditional board game that uses quantum data and concepts to enhance the gameplay.
             <br>
             <br>
-            We are further exploring entanglement using socket connections to entangle multiple ongoing games. This project is being set up as an interactive installation that further explores the intersections of games and quantum computing. More details coming soon...
+            This project was created using the p5.party library by Justin Bakse to create a two-player game that can be player across computers and browsers.
             <br>
             <br>
-            This project was built as a part of the Quantum Design Jam hosted by The New School in partnership with the IBM Skills Academy and IBM Quantum team
+            It builds upon the ideas of Q-sweeper in a multiplayer context.
             <br>
             <br>
             The code is open-source and the game can be played in the browser.
         </p>
         <p>
-            <a class="projectLink" href="https://studio-degen.github.io/q-sweeper/">link to play →</a>
+            <a class="projectLink" href="https://studio-degen.github.io/q-battleship/">link to play →</a>
             <br>
-            <a class="projectLink" href="https://github.com/studio-degen/q-sweeper">link to Github repo →</a>
+            <a class="projectLink" href="https://github.com/studio-degen/q-battleship">link to Github repo →</a>
         </p>
         
         <figure id="mainImg">
             <img src="">
         </figure>
     </section>
+    <section class="gallery_large">
+        <figure>
+            <img src="../assets/battleship_img/map1.png">
+        </figure>
+        <figure>
+            <img src="../assets/battleship_img/gameplay2.png">
+        </figure>
+    </section>
     <section class="gallery">
         <figure>
-            <img src="../assets/q-sweeper_img/ent1.png">
+            <img src="../assets/battleship_img/regularboard.png">
         </figure>
         <figure>
-            <img src="../assets/q-sweeper_img/flag1.png">
+            <img src="../assets/battleship_img/qboard.png">
         </figure>
         <figure>
-            <img src="../assets/q-sweeper_img/full_screen.png">
+            <img src="../assets/battleship_img/keyboard.png">
         </figure>
         <figure>
-            <img src="../assets/q-sweeper_img/full_screen_blank.png">
-        </figure>
-        <figure>
-            <img src="../assets/q-sweeper_img/noise2.png">
-        </figure>
-        <figure>
-            <img src="../assets/q-sweeper_img/noise4.png">
+            <img src="../assets/battleship_img/gameplay.png">
         </figure>
     </section>
     
     <section>
         <h3>Documentation</h3>
-        <p> We created the maps using Bernstein-Vazirani algorithm, an extension of the Deutch-Jozsa algorithm. The 1024 tiles in our board correspond to 1 out of the 1024 shots taken on the quantum computer. Thus, the map transforms into a visualisation of the data and its associated noise. 
-        </p>
-        <div class="gallery">
-            <figure>
-                <img src="../assets/q-sweeper_img/noise2.png">
-            </figure>
-            <figure>
-                <img src="../assets/q-sweeper_img/noise4.png">
-            </figure>
-            <figure>
-                <img src="../assets/q-sweeper_img/noise5.png">
-            </figure>
-            <figure>
-                <img src="../assets/q-sweeper_img/noise6.png">
-            </figure>
-        </div>
+
         <p>
-            The game has two main features: entangled mines and interfering tomatoes. A percentage of the mines are pre-determined to be entangled mines. These mines are interconnected with 2 or 2 other mines. Opening one of these mines will reveal the other mines, but will not end the game. The number of tomatoes are dictated by a percentage of the q-bit data and are placed randomly across the board covering blank and numbered tiles making the game harder for the player. 
+            The game has two main features: quantum maps and entangled ships. The maps were generated using a simple Bell state quantum algorithm programmed in Qiskit. The players ship placement is restricted by the map that changes every game and informs hitting strategy. Players can also choose to entangle two points on their own ships with those of the opponent. When these are hit they also destroy their enemy counterparts allowing for planned opponent sabotage.
         </p>
-        <div class="gallery">
+        <div class="gallery_large">
             <figure>
-                <img src="../assets/q-sweeper_img/ent2.png">
+                <img src="../assets/battleship_img/map2.png">
             </figure>
             <figure>
-                <img src="../assets/q-sweeper_img/flag1.png">
+                <img src="../assets/battleship_img/entangled.png">
             </figure>
         </div>
         <p>
             The game's sound effects were created using the Quantum Music Playground.
-            <br>
+            <!-- <br>
             For a more in-depth explanation and game walkthrough, watch our video <a href="https://youtu.be/8wWyJAOBWls" target="_blank" rel="noopener noreferrer">here</a>. 
             <br>
             <a href="" target="_blank" rel="noopener noreferrer">Click to view transcript</a>.
             <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8wWyJAOBWls?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8wWyJAOBWls?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </p>
     </section>
 
     <section>
         <h3>References</h3>
         <p>
-            We ran our algorithm on the lima quantum computers from <a href="https://qiskit.org/" target="_blank" rel="noopener noreferrer"> IBM's Qiskit starter kit</a>. 
+            We ran our algorithm on the belem quantum computers from <a href="https://qiskit.org/" target="_blank" rel="noopener noreferrer"> IBM's Qiskit starter kit</a>. 
             Our sound was built on <a href="https://www.ableton.com/en/" target="_blank" rel="noopener noreferrer">Ableton</a> using the <a href="https://github.com/JavaFXpert/quantum-music-playground" target="_blank" rel="noopener noreferrer">Quantum Music Playground</a>. 
             <br>
-            The javascript code was built on top of a coding train <a href="https://editor.p5js.org/codingtrain/sketches/-mz-ePoqd" target="_blank" rel="noopener noreferrer">minesweeper project</a> and 
-            the flagging was based on the code <a href="https://github.com/mikolajfrohmberg/p5.js-Minesweeper" target="_blank" rel="noopener noreferrer"> here</a>.
+            Multiplayer was implemented using Justin Bakse's <a href="https://github.com/jbakse/p5.party" target="_blank" rel="noopener noreferrer"> p5.party library</a>.
+            <br>
+            The javascript code was built on top of a simple single player<a href="https://github.com/kubowania/battleships/tree/single-player" target="_blank" rel="noopener noreferrer">battleship greybox</a>.
         </p>
     </section>
     <section>
@@ -134,13 +122,11 @@
         <p>
             Apurv Rayate: Game development, Quantum Computing
             <br>
-            Hyacinth Weng: Game development, Front-end development, Asset Creation
-            <br>
-            Shangshang Li: Game development, Sound Design
-            <br>
             Tanvi Mishra: Game development, Front-end development 
             <br>
-            Yiping Dong: Sound Design, Video Editing and Animations
+            Hyacinth Weng: Asset Creation
+            <br>
+            Yiping Dong: Sound Design
         </p>
     </section>
 </main>

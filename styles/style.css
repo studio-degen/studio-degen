@@ -230,6 +230,9 @@ main a:hover {
   transition: opacity 1s ease-in-out;
   animation: cycleImg 5s infinite;
 }
+#feat3Img {
+  background-image: url("../assets/bscover.png");
+}
 @keyframes cycleImg {
   0% {
     background-image: url("../assets/creative_coding_img/frac1.jpg");
@@ -590,6 +593,19 @@ footer p {
 .gallery_small figure img {
   width: 100%;
 }
+
+.gallery_large {
+  display: grid;
+  grid: 1fr;
+  gap: 2vh 2vw;
+  margin: var(--innerHeightMargin) 0;
+}
+.gallery_large figure img {
+  /* background-color: #564fa1; */
+  /* height: 100%; */
+  width: 100%;
+}
+
 .imagex2 {
   width: calc(0.45 * var(--innerContent));
   height: 305px;
